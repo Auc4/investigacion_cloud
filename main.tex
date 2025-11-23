@@ -1,77 +1,108 @@
-% Configuraciones y Paquetes
+% Pre Documento %
 \documentclass[journal]{IEEEtran}
 
-\usepackage[utf8]{inputenc}
-\usepackage{cite}
 
-% Pre Documento %
+\usepackage[utf8]{inputenc}    
+\usepackage[backend=biber,style=ieee]{biblatex}
+\usepackage{graphicx} 
+\addbibresource{references.bib} 
+
 \title{Security in Cloud}
 
-
 \author{
-    % Nombre del Autor %
-    \IEEEauthorblockN{1\textsuperscript{st} Sebastián Aucapiña}
-    % Nombre de la Facultad %
-    \IEEEauthorblockA{\textit{School of Science Computer} \\
-    % Nombre de la Universidad %
-    \textit{Universidad Internacional del Ecuador}\\
-    % Ciudad, País \\ Email %
-    Quito, Ecuador \\
-    seaucapinava@uide.edu.ec}
+    \IEEEauthorblockN{1\textsuperscript{st} Nombre Autor}
+    \IEEEauthorblockA{
+        \textit{Nombre Escuela} \\
+        \textit{Nombre Universidad} \\
+        Ciudad, País \\
+        email@ejemplo.com
+    }
 }
 
 
-% Documento %
+% ----- DOCUMENTO ----- %
 \begin{document}
 
 \maketitle
 
-% Abstract /  %
 \begin{abstract}
-    Dummy text...
+    Text...
 \end{abstract}
 
 \begin{IEEEkeywords}
     lorem, ipsum
 \end{IEEEkeywords}
 
-
-% Contenido %
-
 \section{Introduction}
-texto texto texto
+Text...
 
-% --------------------------------------------------------------------------- %
-\section{Backgorund}
+% -------------------------------- %
 
+\section{Background}
 
+\subsection{Cloud Computing Essentials}
 
-% --------------------------------------------------------------------------- %
+Cloud computing is defined as the delivery of computing resources over the internet; including, compute power, storage, and databases. This service is based on two main aspects: the on-demand delivery of these assets, and a pay-as-you-go pricing model \cite{OverviewAmazonWeb2025}.
+
+This service has changed how organizations offer their services. For instance, with cloud computing, a user can access their files from any device, as the application is running on a remote server rather than being locally stored. This makes it possible to store terabytes of data or stream thousands of movies \cite{cloudflareWhatCloudCloud}. Additionally, organizations can take advantage of cloud computing since it eliminates the need for large investments in on-premise hardware and can reduce energy or maintenance costs \cite{OverviewAmazonWeb2025}.
+
+Moreover, there are some key characteristics of cloud computing:
+\begin{itemize}
+    \item \textbf{On-demand model:} The customer can increase computing capabilities based on their needs. This is a unilateral process, where users only pay for the computing resources they use \cite{mellNISTDefinitionCloud2011,OverviewAmazonWeb2025}.
+    \item \textbf{Access through the internet:} Management tools are accessible via the internet, enabling access from various devices, such as tablets, personal computers, or mobile phones \cite{mellNISTDefinitionCloud2011}.
+    \item \textbf{Resource pooling:} The cloud provider groups different resources to serve multiple customer demands. Resources are dynamically allocated to customers, often offering high-level abstract options, such as selecting the country, state, or data center group \cite{mellNISTDefinitionCloud2011}.
+    \item \textbf{Speed and Agility:} Resources can be rapidly assigned, allowing services to scale based on demand. This enables customers and project teams to access more resources within minutes rather than weeks \cite{mellNISTDefinitionCloud2011,OverviewAmazonWeb2025}.
+\end{itemize}
+
+\subsubsection{Service Models}
+
+There are different service models associated with cloud computing. According to \cite{cloudflareWhatCloudCloud}, cloud providers offer different categories of products, each with varying levels of abstraction.
+
+\begin{figure}[ht]
+    \includegraphics[width=\columnwidth]{media/cloud_services.png}
+    \caption{Cloud Computing Service Models (Adapted from \cite{cloudflareWhatCloudCloud}).}
+    \label{fig:service_models}
+\end{figure}
+
+As shown in the figure \ref{fig:service_models}, there are multiple service models associated with cloud computing. In consonance with \cite{mellNISTDefinitionCloud2011,cloudflareWhatCloudCloud}, these model are called as Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS) respectively. In addition, as seen in the figure \ref{fig:service_models}, the IaaS model is contained by the other service models due to IaaS forms the basis of cloud computing, and each service runs at leasts in one physical server.
+
+The general description of these models are:
+
+\begin{itemize}
+    \item \textbf{Software as a Service:} This model provides an application that is hosted within a cloud infrastructure. In addition, the customer can access to this services by different devices and they does not control the resources of the application; for instance, server configurations, storage allocated, etc \cite{mellNISTDefinitionCloud2011}. 
+    \item \textbf{Platform as a service:} In this model, the cloud provider offers the possibility to deploy customer-created applications using programming languages, management services and other tools that support the develop process of an application. Nevertheless, the customer does not manage the underlying hardware resources \cite{mellNISTDefinitionCloud2011}. 
+    \item \textbf{Infrastructure as a service:} The Infrastructure as a Service model provides to the customer fundamental computing resources; such as networks, processing or storage. In this service, the customer can deploy specific software or services depending on their requisites. However, the customer is not able to manage physical Infrastructure and security hardware components \cite{mellNISTDefinitionCloud2011}.  
+\end{itemize}
+
+\subsubsection{Deployment Models}
+
+In concordance with \cite{cloudflareWhatCloudCloud}, the definition of the deployment models for cloud computing are related with the specification of the location of these services, and who is responsible for management. 
+
+There are definition for the different deployment methods used in cloud computing: 
+
+\begin{itemize}
+    \item \textbf{Public Cloud:} This deployment method consists on the use of dedicated architecture by a single organization. 
+    \item \textbf{Private Cloud:}
+    \item \textbf{Hybrid Cloud:}
+\end{itemize}
+% -------------------------------- %
+
+% Estado del arte, análisis, etc.
 \section{State of the Art}
-texto texto texto
+Text...
 
 \section{Comparative Analysis}
-texto texto texto
+Text...
 
-\section{Future Research Directions}
-texto texto texto
-
-
-% Conclusiones, Agradecimientos y Referencias %
-
-\section{Conclussions}
-texto texto texto
+\section{Conclusions}
+Text...
 
 \section*{Acknowledgments}
-texto texto texto 
-
-\section*{References}
-texto texto texto
+Text...
 
 
 
-% Configuración de Referencias %
-% \bibliographystyle{IEEEtran}
-% \bibliography{References}
+% ----- REFERENCIAS -----
+\printbibliography
 
 \end{document}
