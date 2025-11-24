@@ -1,4 +1,4 @@
-% Pre Documento %
+% ----- PRE DOCUMENTO ----- %
 \documentclass[journal]{IEEEtran}
 
 
@@ -42,9 +42,9 @@ Text...
 
 \subsection{Cloud Computing Essentials}
 
-Cloud computing is defined as the delivery of computing resources over the internet; including, compute power, storage, and databases. This service is based on two main aspects: the on-demand delivery of these assets, and a pay-as-you-go pricing model \cite{OverviewAmazonWeb2025}.
+Cloud computing is defined as the delivery of computing resources over the internet; including compute power, storage, and databases. This service is based on two main aspects: the on-demand delivery of these assets, and a pay-as-you-go pricing model \cite{OverviewAmazonWeb2025}.
 
-This service has changed how organizations offer their services. For instance, with cloud computing, a user can access their files from any device, as the application is running on a remote server rather than being locally stored. This makes it possible to store terabytes of data or stream thousands of movies \cite{cloudflareWhatCloudCloud}. Additionally, organizations can take advantage of cloud computing since it eliminates the need for large investments in on-premise hardware and can reduce energy or maintenance costs \cite{OverviewAmazonWeb2025}.
+This service has changed how organizations offer their services. For example, with cloud computing, a user can access their files from any device, as the application is running on a remote server rather than being locally stored. This makes it possible to store terabytes of data or stream thousands of movies \cite{cloudflareWhatCloudCloud}. Additionally, organizations can take advantage of cloud computing since it eliminates the need for large investments in on-premise hardware and can reduce energy or maintenance costs \cite{OverviewAmazonWeb2025}.
 
 Moreover, there are some key characteristics of cloud computing:
 \begin{itemize}
@@ -64,27 +64,32 @@ There are different service models associated with cloud computing. According to
     \label{fig:service_models}
 \end{figure}
 
-As shown in the figure \ref{fig:service_models}, there are multiple service models associated with cloud computing. In consonance with \cite{mellNISTDefinitionCloud2011,cloudflareWhatCloudCloud}, these model are called as Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS) respectively. In addition, as seen in the figure \ref{fig:service_models}, the IaaS model is contained by the other service models due to IaaS forms the basis of cloud computing, and each service runs at leasts in one physical server.
+As shown in the figure \ref{fig:service_models}, there are multiple service models associated with cloud computing. As defined in \cite{mellNISTDefinitionCloud2011,cloudflareWhatCloudCloud}, these models are known as Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS) respectively. According to figure \ref{fig:service_models}, PaaS and SaaS models are built on top of IaaS components because IaaS forms the basis of cloud computing, and each service runs on at least on one physical server.
 
-The general description of these models are:
-
+The general description of these models is:
 \begin{itemize}
-    \item \textbf{Software as a Service:} This model provides an application that is hosted within a cloud infrastructure. In addition, the customer can access to this services by different devices and they does not control the resources of the application; for instance, server configurations, storage allocated, etc \cite{mellNISTDefinitionCloud2011}. 
-    \item \textbf{Platform as a service:} In this model, the cloud provider offers the possibility to deploy customer-created applications using programming languages, management services and other tools that support the develop process of an application. Nevertheless, the customer does not manage the underlying hardware resources \cite{mellNISTDefinitionCloud2011}. 
-    \item \textbf{Infrastructure as a service:} The Infrastructure as a Service model provides to the customer fundamental computing resources; such as networks, processing or storage. In this service, the customer can deploy specific software or services depending on their requisites. However, the customer is not able to manage physical Infrastructure and security hardware components \cite{mellNISTDefinitionCloud2011}.  
+    \item \textbf{Software as a Service:} This model provides an application that is hosted within a cloud infrastructure. In addition, the customer can access these services from different devices and they do not control the resources of the application; for instance, server configurations, storage allocated, etc \cite{mellNISTDefinitionCloud2011}. 
+    \item \textbf{Platform as a service:} In this model, the cloud provider offers the possibility to deploy customer-created applications using programming languages, management services and other tools that support the development process of an application. Nevertheless, the customer does not manage the underlying hardware resources \cite{mellNISTDefinitionCloud2011}. 
+    \item \textbf{Infrastructure as a service:} The infrastructure as a Service model provides to the customer fundamental computing resources; such as networks, processing or storage. In this service, the customer can deploy specific software or services depending on their requisites. However, the customer is not able to manage physical infrastructure and security hardware components \cite{mellNISTDefinitionCloud2011}.  
 \end{itemize}
 
 \subsubsection{Deployment Models}
 
-In concordance with \cite{cloudflareWhatCloudCloud}, the definition of the deployment models for cloud computing are related with the specification of the location of these services, and who is responsible for management. 
+As defined in \cite{cloudflareWhatCloudCloud}, the definition of the deployment models for cloud computing is related to the specification of the location of these services, and who is responsible for management. 
 
-There are definition for the different deployment methods used in cloud computing: 
+Different deployment models define how resources are located, managed and consumed: 
 
 \begin{itemize}
-    \item \textbf{Public Cloud:} This deployment method consists on the use of dedicated architecture by a single organization. 
-    \item \textbf{Private Cloud:}
-    \item \textbf{Hybrid Cloud:}
+    \item \textbf{Private Cloud:} Private cloud consists of using dedicated architecture by a single organization. In addition, the management of these resources is the responsibility of the organization, a third party vendor or a combination or both options taking an on-premise or off-premise solution \cite{mellNISTDefinitionCloud2011}.
+    \item \textbf{Public Cloud:} A public cloud offers computing resources to the general public. These resources are owned and managed by a cloud provider, which can be a commercial provider, an organization, or a government entity \cite{mellNISTDefinitionCloud2011}. In addition, the public cloud is used for taking advantage of cloud computing, develop and distribute a service using low-level infrastructure, as seen in IaaS; or a high level platform, as seen in PaaS \cite{OverviewAmazonWeb2025}.
+    \item \textbf{Hybrid Cloud:} A hybrid cloud combines public and private cloud environments. Each model has its own independence, but they are connected through standardized processes and systems \cite{mellNISTDefinitionCloud2011}. Additionally, the most common case is to use legacy on-premise infrastructure of an organization, and connect it to the cloud to improve procedures and combine the benefits of each model \cite{OverviewAmazonWeb2025}.
 \end{itemize}
+
+Furthermore, the private cloud has different approaches due to its requirements have higher costs than public cloud solutions. According to \cite{stackscaleTypesCloudCloud}, there are multiple solutions for private cloud. First, the \textit{on-premise solutions} are used for physical resources within the organization. Second, the management of the private cloud could be shared with a third party vendor that hosts the infrastructure; this is called \textit{hosted private cloud}. Finally, there is a solution to isolate the resources used within the public cloud to have a control of hardware and network elements; this solution is called as \textit{Virtual Private Cloud}(VPC). 
+
+
+\subsection{Cloud Security Principles}
+
 % -------------------------------- %
 
 % Estado del arte, análisis, etc.
