@@ -85,11 +85,32 @@ Different deployment models define how resources are located, managed and consum
     \item \textbf{Hybrid Cloud:} A hybrid cloud combines public and private cloud environments. Each model has its own independence, but they are connected through standardized processes and systems \cite{mellNISTDefinitionCloud2011}. Additionally, the most common case is to use legacy on-premise infrastructure of an organization, and connect it to the cloud to improve procedures and combine the benefits of each model \cite{OverviewAmazonWeb2025}.
 \end{itemize}
 
-Furthermore, the private cloud has different approaches due to its requirements have higher costs than public cloud solutions. According to \cite{stackscaleTypesCloudCloud}, there are multiple solutions for private cloud. First, the \textit{on-premise solutions} are used for physical resources within the organization. Second, the management of the private cloud could be shared with a third party vendor that hosts the infrastructure; this is called \textit{hosted private cloud}. Finally, there is a solution to isolate the resources used within the public cloud to have a control of hardware and network elements; this solution is called as \textit{Virtual Private Cloud}(VPC). 
+Furthermore, the private cloud has different approaches due to its requirements have higher costs than public cloud solutions. According to \cite{stackscaleTypesCloudCloud}, there are multiple solutions for private cloud. First, the \textit{on-premise solutions} are used for physical resources within the organization. Second, the management of the private cloud could be shared with a third party vendor that hosts the infrastructure; this is called \textit{hosted private cloud}. Finally, there is a solution to isolate the resources used within the public cloud to have a control of hardware and network elements; this solution is called as \textit{Virtual Private Cloud} (VPC). 
 
 
 \subsection{Cloud Security Principles}
 
+As described in \cite{fortinetCloudSecurity}, security in cloud environments refers to the set of technologies and practices used to protect cloud-based environments from threats and vulnerabilities that could impact an organization.
+
+Adopting these techniques enhance multiple aspects of an organization. According to \cite{fortinetCloudSecurity}, adopting cloud security measures can make the work environment safer for employees, ensuring data management and helping to meet regulatory compliances. Consequently, there are various principles that could be used to have a general overview of cloud security.
+
+\subsubsection{CIA Triad Model}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{media/cia_triad.png}
+    \caption{CIA Triad Diagram (Adapted from )}
+    \label{fig:cia_triad}
+\end{figure}
+
+The figure \ref{fig:cia_triad} shows a general diagram the CIA triad, a foundational model used for developing security systems \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}. Each point within the diagram refers to the pillars of Confidentiality, Integrity and Availability (CIA). 
+
+Each pillar of CIA can be described as follows:
+\begin{itemize}
+    \item \textbf{Confidentiality:}
+    \item \textbf{Integrity:}
+    \item \textbf{Availability:}
+\end{itemize}
 % -------------------------------- %
 
 % Estado del arte, análisis, etc.
@@ -109,5 +130,6 @@ Text...
 
 % ----- REFERENCIAS -----
 \printbibliography
+
 
 \end{document}
