@@ -99,28 +99,54 @@ Adopting these techniques enhance multiple aspects of an organization. According
 
 \subsubsection{CIA Triad Model}
 
-\begin{figure}[ht]
+The figure \ref{fig:cia_triad} shows a general diagram the CIA triad, a foundational model used for developing security systems \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}. Each point within the diagram refers to the pillars of Confidentiality, Integrity and Availability (CIA). 
+
+\begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{media/cia_triad.png}
     \caption{CIA Triad Diagram (Adapted from \cite{geeksforgeeksCiaTriad})}
     \label{fig:cia_triad}
 \end{figure}
 
-The figure \ref{fig:cia_triad} shows a general diagram the CIA triad, a foundational model used for developing security systems \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}. Each point within the diagram refers to the pillars of Confidentiality, Integrity and Availability (CIA). 
 
 Each pillar of CIA can be described as follows:
 \begin{itemize}
     \item \textbf{Confidentiality:} Ensures that the data is only available for authorized users, keeping it secret and private, even if the breaches of security are intentional or accidental. \cite{geeksforgeeksCiaTriad,fortinetCiaTriad}.
     \item \textbf{Integrity:} Integrity refers to maintain a data consistency, ensuring that is not tampered by unauthorized actors; therefore, the data is reliable, authentic and accurate \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}. 
-    \item \textbf{Availability:} The services are accesible when needed, reducing downtime. If the services are not available, they are useless \cite{geeksforgeeksCiaTriad,fortinetCiaTriad}.
+    \item \textbf{Availability:} The services are accessible when needed, reducing downtime. If the services are not available, they are useless \cite{geeksforgeeksCiaTriad,fortinetCiaTriad}.
 \end{itemize}
 
 These model is fundamental for making a general review for ensuring security within cloud environments. As \cite{fortinetCiaTriad} describes, an effective system covers this model, and it is deficient if one of the pillars is not met.
 
 \subsubsection{Shared responsibility Model}
-As defined in \cite{sharedCrowdrespon}, the sared responsibility model refers to a framework a compliance framework that is used for establish the responsibilities of customers and Cloud Service Provders (CSPs) within cloud environments.
 
-It is critical to unserdstand that the CSPs don't protect each aspect of cloud resources that are offered \cite{sharedCrowdrespon}.
+As defined in \cite{sharedCrowdrespon}, the shared responsibility model refers to a framework a compliance framework that is used for establish the responsibilities of customers and Cloud Service Providers (CSPs) within cloud environments. 
+
+This framework involves the service models seen in section \ref{fig:service_models} that includes Software as a Service (SaaS), Platform as a Service (PaaS), Infrastructure as a Service (IaaS) and On-premise infrastructure \cite{sharedCrowdrespon}. Additionally, it is critical to understand that these terms differs depending on how the CSP has decided to implement their product \cite{sharedCrowdrespon,ukGovrespon}. 
+
+Finally, as show in the table \ref{fig:shared_responsibility} regarding of the service model being followed, such as SaaS, IaaS or PaaS; it is important to understand that are some aspects that must be controlled by the customer; such as the data stored within the systems, the security configurations and using a service that meet customer requirements \cite{ukGovrespon,sharedCrowdrespon}.
+
+\begin{table*}[h]
+\caption{Responsibility based on Service Models}
+\label{fig:shared_responsibility}
+\centering
+\begin{tabular}{c c c c c c}
+\hline
+\textbf{} & \textbf{On-premise} & \textbf{IaaS} & \textbf{PaaS} & \textbf{SaaS} & \textbf{References}\\
+\hline
+Application Configuration & Customer & Customer & Customer & Customer & \cite{ukGovrespon,sharedCrowdrespon} \\
+Identity \& Access Controls & Customer & Customer & Customer / CSP & Customer / CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+Application and Data Storage & Customer & Customer & Customer / CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+Application & Customer & Customer & Customer & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+Operating System & Customer & Customer & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+Network Flow Controls & Customer & Customer / CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+Host Infrastructure & Customer & CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+Physical Security & Customer & CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+\hline
+\end{tabular}
+\end{table*}
+
+
 \subsubsection{Auditability and compliance}
 
 
@@ -134,14 +160,10 @@ Text...
 \section{Methodology}
 Text...
 
-\section{Results}
+\section{Results and Discussions}
 Text...
 
-\section{Conclusions}
-Text... 
-
-\section{Discussions}
-Text...s
+\section{Conclusion}
 
 
 % ----- REFERENCIAS -----
