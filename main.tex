@@ -43,64 +43,82 @@ Text...
 \subsection{Cloud Computing Essentials}
 \label{sec:cloud_essentials}
 
-Cloud computing (CC) is defined as the delivery of computing resources over the internet; including compute power, storage, and databases \cite{OverviewAmazonWeb2025}. This service is based on two main aspects: the on-demand delivery of these assets, and a pay-as-you-go pricing model \cite{OverviewAmazonWeb2025}.
-
-This service has changed how organizations offer their services because with CC a user can access their files from any device, which is running on a remote server rather than being locally stored. This makes it possible to store terabytes of data or stream thousands of movies \cite{cloudflareWhatCloudCloud}. Additionally, organizations can take advantage of CC since it eliminates the need for large investments in on-premise hardware and can reduce energy or maintenance costs \cite{OverviewAmazonWeb2025}.
-
+Cloud computing (CC) is defined as the delivery of computing resources over the internet;
+including compute power, storage, and databases \cite{OverviewAmazonWeb2025}. This service is based on two main aspects: the on-demand delivery of these assets, and a pay-as-you-go pricing model \cite{OverviewAmazonWeb2025}.
+This service has changed how organizations offer their services because with CC a user can access their files from any device, which is running on a remote server rather than being locally stored.
+This makes it possible to store terabytes of data or stream thousands of movies \cite{cloudflareWhatCloudCloud}.
+Additionally, organizations can take advantage of CC since it eliminates the need for large investments in on-premise hardware and can reduce energy or maintenance costs \cite{OverviewAmazonWeb2025}.
 Moreover, there are some key characteristics of CC:
 \begin{itemize}
-    \item \textit{On-demand model:} The customer can increase computing capabilities based on their needs. This is a unilateral process, where users only pay for the computing resources they use \cite{mellNISTDefinitionCloud2011,OverviewAmazonWeb2025}.
-    \item \textit{Access through the internet:} Management tools are accessible via the internet, enabling access from various devices, such as tablets, personal computers, or mobile phones \cite{mellNISTDefinitionCloud2011}.
-    \item \textit{Resource pooling:} The cloud provider groups different resources to serve multiple customer demands. Resources are dynamically allocated to customers, often offering high-level abstract options, such as selecting the country, state, or data center group \cite{mellNISTDefinitionCloud2011}.
-    \item \textit{Speed and Agility:} Resources can be rapidly assigned, allowing services to scale based on demand. This enables customers and project teams to access more resources within minutes rather than weeks \cite{mellNISTDefinitionCloud2011,OverviewAmazonWeb2025}.
+    \item \textit{On-demand model:} The customer can increase computing capabilities based on their needs.
+This is a unilateral process, where users only pay for the computing resources they use \cite{mellNISTDefinitionCloud2011,OverviewAmazonWeb2025}.
+\item \textit{Access through the internet:} Management tools are accessible via the internet, enabling access from various devices, such as tablets, personal computers, or mobile phones \cite{mellNISTDefinitionCloud2011}.
+\item \textit{Resource pooling:} The cloud provider groups different resources to serve multiple customer demands.
+Resources are dynamically allocated to customers, often offering high-level abstract options, such as selecting the country, state, or data center group \cite{mellNISTDefinitionCloud2011}.
+\item \textit{Speed and Agility:} Resources can be rapidly assigned, allowing services to scale based on demand.
+This enables customers and project teams to access more resources within minutes rather than weeks \cite{mellNISTDefinitionCloud2011,OverviewAmazonWeb2025}.
 \end{itemize}
 
 \subsubsection{Service Models}
 \label{sec:service_models}
 
 There are different service models associated with CC. According to \cite{cloudflareWhatCloudCloud}, cloud providers offer different categories of products, each with varying levels of abstraction.
-
 \begin{figure}[ht]
     \includegraphics[width=\columnwidth]{media/cloud_services.png}
     \caption{Cloud Computing Service Models (Adapted from \cite{cloudflareWhatCloudCloud}).}
     \label{fig:service_models}
 \end{figure}
 
-As shown in the figure \ref{fig:service_models}, there are multiple service models associated with CC. As defined in \cite{mellNISTDefinitionCloud2011,cloudflareWhatCloudCloud}, these models are known as Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS) respectively. According to figure \ref{fig:service_models}, PaaS and SaaS models are built on top of IaaS components because IaaS forms the basis of CC, and each service runs on at least on one physical server.
-
+As shown in the figure \ref{fig:service_models}, there are multiple service models associated with CC.
+As defined in \cite{mellNISTDefinitionCloud2011,cloudflareWhatCloudCloud}, these models are known as Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS) respectively.
+According to figure \ref{fig:service_models}, PaaS and SaaS models are built on top of IaaS components because IaaS forms the basis of CC, and each service runs on at least one physical server.
 The general description of these models is:
 \begin{itemize}
-    \item \textit{Software as a Service:} This model provides an application that is hosted within a cloud infrastructure. In addition, the customer can access these services from different devices and they do not control the resources of the application; for instance, server configurations, storage allocated, etc \cite{mellNISTDefinitionCloud2011}. 
-    \item \textit{Platform as a service:} In this model, the cloud provider offers the possibility to deploy customer-created applications using programming languages, management services and other tools that support the development process of an application. Nevertheless, the customer does not manage the underlying hardware resources \cite{mellNISTDefinitionCloud2011}. 
-    \item \textit{Infrastructure as a service:} The infrastructure as a Service model provides to the customer fundamental computing resources; such as networks, processing or storage. In this service, the customer can deploy specific software or services depending on their requisites. However, the customer is not able to manage physical infrastructure and security hardware components \cite{mellNISTDefinitionCloud2011}.  
+    \item \textit{Software as a Service:} This model provides an application that is hosted within a cloud infrastructure.
+In addition, the customer can access these services from different devices, and they do not control the resources of the application;
+for instance, server configurations, storage allocated, etc \cite{mellNISTDefinitionCloud2011}. 
+    \item \textit{Platform as a service:} In this model, the cloud provider offers the possibility to deploy customer-created applications using programming languages, management services and other tools that support the development process of an application.
+Nevertheless, the customer does not manage the underlying hardware resources \cite{mellNISTDefinitionCloud2011}.
+\item \textit{Infrastructure as a service:} The Infrastructure as a Service model provides the customer fundamental computing resources;
+such as networks, processing or storage. In this service, the customer can deploy specific software or services depending on their requisites.
+However, the customer is not able to manage physical infrastructure and security hardware components \cite{mellNISTDefinitionCloud2011}.
 \end{itemize}
 
 \paragraph{Deployment Models}
 \label{sec:deployment_models}
 
-As defined in \cite{cloudflareWhatCloudCloud}, the definition of the deployment models for cloud computing (CC) is related to the specification of the location of these services, and who is responsible for management. 
-
+As defined in \cite{cloudflareWhatCloudCloud}, the definition of the deployment models for cloud computing (CC) is related to the specification of the location of these services, and who is responsible for management.
 Different deployment models define how resources are located, managed and consumed: 
 
 \begin{itemize}
-    \item \textit{Private Cloud:} Private cloud consists of using dedicated architecture by a single organization. In addition, the management of these resources is the responsibility of the organization, a third party vendor or a combination or both options taking an on-premise or off-premise solution \cite{mellNISTDefinitionCloud2011}.
-    \item \textit{Public Cloud:} A public cloud offers computing resources to the general public. These resources are owned and managed by a cloud provider, which can be a commercial provider, an organization, or a government entity \cite{mellNISTDefinitionCloud2011}. In addition, the public cloud is used for taking advantage of CC, develop and distribute a service using low-level infrastructure, as seen in IaaS; or a high level platform, as seen in PaaS \cite{OverviewAmazonWeb2025}.
-    \item \textit{Hybrid Cloud:} A hybrid cloud combines public and private cloud environments. Each model has its own independence, but they are connected through standardized processes and systems \cite{mellNISTDefinitionCloud2011}. Additionally, the most common case is to use legacy on-premise infrastructure of an organization, and connect it to the cloud to improve procedures and combine the benefits of each model \cite{OverviewAmazonWeb2025}.
+    \item \textit{Private Cloud:} Private cloud consists of using dedicated architecture by a single organization.
+In addition, the management of these resources is the responsibility of the organization, a third party vendor or a combination of both options, taking an on-premise or off-premise solution \cite{mellNISTDefinitionCloud2011}.
+\item \textit{Public Cloud:} A public cloud offers computing resources to the general public.
+These resources are owned and managed by a cloud provider, which can be a commercial provider, an organization, or a government entity \cite{mellNISTDefinitionCloud2011}.
+In addition, the public cloud is used for taking advantage of CC, develop and distribute a service using low-level infrastructure, as seen in IaaS;
+or a high-level platform, as seen in PaaS \cite{OverviewAmazonWeb2025}.
+\item \textit{Hybrid Cloud:} A hybrid cloud combines public and private cloud environments.
+Each model has its own independence, but they are connected through standardized processes and systems \cite{mellNISTDefinitionCloud2011}.
+Additionally, the most common case is to use legacy on-premise infrastructure of an organization, and connect it to the cloud to improve procedures and combine the benefits of each model \cite{OverviewAmazonWeb2025}.
 \end{itemize}
 
-Furthermore, the private cloud has different approaches due to its requirements have higher costs than public cloud solutions. According to \cite{stackscaleTypesCloudCloud}, there are multiple solutions for private cloud. First, the \textit{on-premise solutions} are used for physical resources within the organization. Second, the management of the private cloud could be shared with a third party vendor that hosts the infrastructure; this is called \textit{hosted private cloud}. Finally, there is a solution to isolate the resources used within the public cloud to have a control of hardware and network elements; this solution is called as \textit{Virtual Private Cloud} (VPC). 
+Furthermore, the private cloud has different approaches due to its requirements have higher costs than public cloud solutions.
+According to \cite{stackscaleTypesCloudCloud}, there are multiple solutions for private cloud.
+First, the \textit{on-premise solutions} are used for physical resources within the organization.
+Second, the management of the private cloud could be shared with a third-party vendor that hosts the infrastructure;
+this is called \textit{hosted private cloud}. Finally, there is a solution to isolate the resources used within the public cloud to have control of hardware and network elements;
+this solution is called as \textit{Virtual Private Cloud} (VPC). 
 
 
 \subsection{Cloud Security Principles}
 
 As described in \cite{fortinetCloudSecurity}, security in cloud environments refers to the set of technologies and practices used to protect cloud-based environments from threats and vulnerabilities that could impact an organization.
-
-Adopting these techniques enhance multiple aspects of an organization. According to \cite{fortinetCloudSecurity}, adopting cloud security measures can make the work environment safer for employees, ensuring data management and helping to meet regulatory compliances. Consequently, there are various principles that could be used to have a general overview of cloud security.
-
+Adopting these techniques enhances multiple aspects of an organization. According to \cite{fortinetCloudSecurity}, adopting cloud security measures can make the work environment safer for employees, ensuring data management and helping to meet regulatory compliances.
+Consequently, there are various principles that could be used to have a general overview of cloud security.
 \paragraph{CIA Triad Model}
 
-The figure \ref{fig:cia_triad} shows a general diagram the CIA triad, a foundational model used for developing security systems \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}. Each point within the diagram refers to the pillars of Confidentiality, Integrity and Availability (CIA). 
-
+The figure \ref{fig:cia_triad} shows a general diagram of the CIA triad, a foundational model used for developing security systems \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}.
+Each point within the diagram refers to the pillars of Confidentiality, Integrity and Availability (CIA).
 \begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{media/cia_triad.png}
@@ -111,21 +129,24 @@ The figure \ref{fig:cia_triad} shows a general diagram the CIA triad, a foundati
 
 Each pillar of CIA can be described as follows:
 \begin{itemize}
-    \item \textit{Confidentiality:} Ensures that the data is only available for authorized users, keeping it secret and private, even if the breaches of security are intentional or accidental. \cite{geeksforgeeksCiaTriad,fortinetCiaTriad}.
-    \item \textit{Integrity:} Integrity refers to maintain a data consistency, ensuring that is not tampered by unauthorized actors; therefore, the data is reliable, authentic and accurate \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}. 
-    \item \textit{Availability:} The services are accessible when needed, reducing downtime. If the services are not available, they are useless \cite{geeksforgeeksCiaTriad,fortinetCiaTriad}.
+    \item \textit{Confidentiality:} Ensures that the data is only available for authorized users, keeping it secret and private, even if the breaches of security are intentional or accidental
+\cite{geeksforgeeksCiaTriad,fortinetCiaTriad}.
+    \item \textit{Integrity:} Integrity refers to maintaining data consistency, ensuring that it is not tampered with by unauthorized actors;
+therefore, the data is reliable, authentic and accurate \cite{fortinetCiaTriad,geeksforgeeksCiaTriad}. 
+    \item \textit{Availability:} The services are accessible when needed, reducing downtime.
+If the services are not available, they are useless \cite{geeksforgeeksCiaTriad,fortinetCiaTriad}.
 \end{itemize}
 
-These model is fundamental for making a general review for ensuring security within cloud environments. As \cite{fortinetCiaTriad} describes, an effective system covers this model, and it is deficient if one of the pillars is not met.
-
+This model is fundamental for making a general review for ensuring security within cloud environments.
+As \cite{fortinetCiaTriad} describes, an effective system covers this model, and it is deficient if one of the pillars is not met.
 \paragraph{Shared responsibility Model}
 
-As defined in \cite{sharedCrowdrespon}, the shared responsibility model refers to a framework a compliance framework that is used for establish the responsibilities of customers and Cloud Service Providers (CSPs) within cloud environments. 
-
-This framework involves the service models seen in section \ref{fig:service_models} that includes Software as a Service (SaaS), Platform as a Service (PaaS), Infrastructure as a Service (IaaS) and On-premise infrastructure \cite{sharedCrowdrespon}. Additionally, it is critical to understand that these terms differs depending on how the CSP has decided to implement their product \cite{sharedCrowdrespon,ukGovrespon}. 
-
-Finally, as show in the table \ref{fig:shared_responsibility} regarding of the service model being followed, such as SaaS, IaaS or PaaS; it is important to understand that are some aspects that must be controlled by the customer; such as the data stored within the systems, the security configurations and using a service that meet customer requirements \cite{ukGovrespon,sharedCrowdrespon}.
-
+As defined in \cite{sharedCrowdrespon}, the shared responsibility model refers to a compliance framework that is used to establish the responsibilities of customers and Cloud Service Providers (CSPs) within cloud environments.
+This framework involves the service models seen in section \ref{fig:service_models} that include Software as a Service (SaaS), Platform as a Service (PaaS), Infrastructure as a Service (IaaS) and On-premise infrastructure \cite{sharedCrowdrespon}.
+Additionally, it is critical to understand that these terms differ depending on how the CSP has decided to implement their product \cite{sharedCrowdrespon,ukGovrespon}.
+Finally, as shown in the table \ref{fig:shared_responsibility} regarding the service model being followed, such as SaaS, IaaS or PaaS;
+it is important to understand that there are some aspects that must be controlled by the customer;
+such as the data stored within the systems, the security configurations and using a service that meets customer requirements \cite{ukGovrespon,sharedCrowdrespon}.
 \begin{table*}[h]
 \caption{Responsibility based on Service Models}
 \label{fig:shared_responsibility}
@@ -139,7 +160,8 @@ Identity \& Access Controls & Customer & Customer & Customer / CSP & Customer / 
 Application and Data Storage & Customer & Customer & Customer / CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
 Application & Customer & Customer & Customer & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
 Operating System & Customer & Customer & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
-Network Flow Controls & Customer & Customer / CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+Network Flow Controls & Customer & Customer / CSP & CSP & 
+CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
 Host Infrastructure & Customer & CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
 Physical Security & Customer & CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
 \hline
@@ -147,166 +169,154 @@ Physical Security & Customer & CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdre
 \end{table*}
 \subsection{Most Common Security Vulnerabilities}
 
-The flexible and scalable environment that cloud computing provides became with new concerns about security issues \cite{centinelVulner}, this scenario is originated due to a bad transition to cloud-based environments and a lack of awareness of security threats, which have become more sophisticated and complex \cite{centinelVulner}. Therefore, there are different security vulnerabilities that must me considered within these environments to have an up-to-date perception of the current challenges and threats in cloud environments \cite{securityAlliancerep}.
-
+The flexible and scalable environment that cloud computing provides came with new concerns about security issues \cite{centinelVulner}; this scenario is originated due to a bad transition to cloud-based environments and a lack of awareness of security threats, which have become more sophisticated and complex \cite{centinelVulner}.
+Therefore, there are different security vulnerabilities that must be considered within these environments to have an up-to-date perception of the current challenges and threats in cloud environments \cite{securityAlliancerep}.
 \paragraph{Misconfiguration and Inadequate Change Control}
 
-These vulnerability refers to an incorrect or sub-optimal configuration of cloud computing resources that leaves the asset to unintended damage or malicious activities \cite{securityAlliancerep}. Misconfiguration vulnerability is caused because an insufficient knowledge of cloud configurations, security measures and hostile intentions \cite{securityAlliancerep}. 
-
+This vulnerability refers to an incorrect or sub-optimal configuration of cloud computing resources that leaves the asset open to unintended damage or malicious activities \cite{securityAlliancerep}.
+Misconfiguration vulnerability is caused by an insufficient knowledge of cloud configurations, security measures and hostile intentions \cite{securityAlliancerep}.
 \begin{itemize}
-    \item \textit{Common misconfigurations:} Include poor management of user credentials, lack of authorization for specific resources, unnecessary permissions for cloud assets and bad monitoring systems \cite{securityAlliancerep}. 
-    \item \textit{Impact for the business:} This threat impacts into data CIA pillars (Confidentiality, Integrity, Availability), affects operational processes that can lead into a reputational damage for the company \cite{securityAlliancerep}.
+    \item \textit{Common misconfigurations:} Include poor management of user credentials, lack of authorization for specific resources, unnecessary permissions for cloud assets and bad monitoring systems \cite{securityAlliancerep}.
+\item \textit{Impact for the business:} This threat impacts the data CIA pillars (Confidentiality, Integrity, Availability), affects operational processes that can lead to reputational damage for the company \cite{securityAlliancerep}.
 \end{itemize}
 
-Based on \cite{securityAlliancerep}, it is recommended to implement automated monitoring, audits and assessments for cloud configurations; in addition, each change should be critically analyzed to apply a change configuration for every operation.
+Based on \cite{securityAlliancerep}, it is recommended to implement automated monitoring, audits and assessments for cloud configurations;
+in addition, each change should be critically analyzed to apply a change configuration for every operation.
+\paragraph{Identity \& Access Management}
 
-\paragraph{Identity \& Access Managemet}
-
-As defined in \cite{securityAlliancerep}, Identity \& Access Management (IAM) refers a group of policies used for providing access to resources only for authorized individuals after proving who they are. Moreover, this critical aspect defines how the privileges are issued and detail conditions for these assignments \cite{securityAlliancerep}.
-
+As defined in \cite{securityAlliancerep}, Identity \& Access Management (IAM) refers to a group of policies used for providing access to resources only for authorized individuals after proving who they are.
+Moreover, this critical aspect defines how the privileges are issued and details conditions for these assignments \cite{securityAlliancerep}.
 \begin{itemize}
-    \item \textit{Challenges:} IAM management have multiple challenges because of its complexity \cite{securityAlliancerep}. It is critical to implement multiple layers of security that ensures a correct management of privileges, accounts and resource access \cite{securityAlliancerep}. 
-    \item \textit{Impact for the business:} A bad implementation of IAM framework could affect accounts with elevated privileges, reuse of outdated accounts, and non-compliance scenarios for multiple standards \cite{securityAlliancerep}.
+    \item \textit{Challenges:} IAM management has multiple challenges because of its complexity \cite{securityAlliancerep}.
+It is critical to implement multiple layers of security that ensure a correct management of privileges, accounts and resource access \cite{securityAlliancerep}.
+\item \textit{Impact for the business:} A bad implementation of the IAM framework could affect accounts with elevated privileges, reuse of outdated accounts, and non-compliance scenarios for multiple standards \cite{securityAlliancerep}.
 \end{itemize}
 
 
-As described in \cite{securityAlliancerep}, managing IAM is a complex process that generates multiple security breaches; in addition, the cloud service providers have different IAM rules that could create security gaps within different systems.
-
-Finally, it is recommended to follow best practices to enhance IAM control \cite{securityAlliancerep}; for instance, unify IAM solutions for a centralized management, provide only minimum privileges for all users, and automate the monitoring of lifecycle accounts \cite{securityAlliancerep}.
-
-\paragraph{Insercure Interfaces}
+As described in \cite{securityAlliancerep}, managing IAM is a complex process that generates multiple security breaches;
+in addition, the cloud service providers have different IAM rules that could create security gaps within different systems.
+Finally, it is recommended to follow best practices to enhance IAM control \cite{securityAlliancerep};
+for instance, unify IAM solutions for centralized management, provide only minimum privileges for all users, and automate the monitoring of account lifecycles \cite{securityAlliancerep}.
+\paragraph{Insecure Interfaces}
 
 As detailed in \cite{securityAlliancerep}, Cloud Service Providers, third-party vendors or developers often use Application Programming Interfaces (APIs) for communication between systems or Graphic User Interfaces (GUIs) for monitoring and control of cloud assets.
-
 \begin{itemize}
-    \item \textit{Common vulnerabilities:} Vulnerable interfaces have a lack of authentication mechanisms, outdated software, ineffective encryption methods or deficient compliance on share responsibility agreement \cite{securityAlliancerep}.
-    \item \textit{Impact for the business:} The business could be impact in exploitation of backend systems, shutdown periods and penalties for faulting regulatory requirements \cite{securityAlliancerep}.
+    \item \textit{Common vulnerabilities:} Vulnerable interfaces have a lack of authentication mechanisms, outdated software, ineffective encryption methods or deficient compliance on the shared responsibility agreement \cite{securityAlliancerep}.
+\item \textit{Impact for the business:} The business could be impacted by exploitation of backend systems, shutdown periods and penalties for violating regulatory requirements \cite{securityAlliancerep}.
 \end{itemize}
 
-As show in \cite{securityAlliancerep}, it is important to implement best practices for developing more secure interfaces, monitoring interfaces to identify possible exposures or identify how these interfaces work in different service models; such as migrating to a on-premise environment to a Software as a Service model.
-
+As shown in \cite{securityAlliancerep}, it is important to implement best practices for developing more secure interfaces, monitoring interfaces to identify possible exposures or identify how these interfaces work in different service models;
+such as migrating from an on-premise environment to a Software as a Service model.
 \paragraph{Inadequate Cloud Security Strategy}
 
-According to \cite{securityAlliancerep}, a cloud strategy is a high-level blueprint where different elements are considered, such as external factors, legacy technology, and tools that will be used and trends within the sector.
-
+According to \cite{securityAlliancerep}, a cloud strategy is a high-level blueprint where different elements are considered, such as external factors, legacy technology, the tools that will be used and trends within the sector.
 \begin{itemize}
-    \item \textit{Considerations for cloud strategy:} There are two approaches that need to be considered for developing an appropriate cloud strategy \cite{securityAlliancerep}. First, it is essential to develop a technological blueprint; second, it is critical to design a sufficient security strategy \cite{securityAlliancerep}.
-    \item \textit{Impact fo the Business:} As shown in \cite{securityAlliancerep}, poor cloud strategies could lead into multiple scenarios; for example, a data disclosure event, impacts into operational processes for development and engineering, or financial looses for refactoring security breaches \cite{securityAlliancerep}.
+    \item \textit{Considerations for cloud strategy:} There are two approaches that need to be considered for developing an appropriate cloud strategy \cite{securityAlliancerep}.
+First, it is essential to develop a technological blueprint; second, it is critical to design a sufficient security strategy \cite{securityAlliancerep}.
+\item \textit{Impact for the Business:} As shown in \cite{securityAlliancerep}, poor cloud strategies could lead to multiple scenarios;
+for example, a data disclosure event, impacts on operational processes for development and engineering, or financial losses for refactoring security breaches \cite{securityAlliancerep}.
 \end{itemize}
 
 As detailed in \cite{securityAlliancerep}, technological strategy focuses on designing the cloud elements that will be used by considering the deployment model, the Cloud Service Provider that will be contracted or required services for developing an architecture.
-
-On the other hand, the security strategy analyses future expansion plans that might require physical infrastructure, avoid vendor lock-ins or design a solid Identity \& Access Management (IAM) environment \cite{securityAlliancerep}. 
-
+On the other hand, the security strategy analyzes future expansion plans that might require physical infrastructure, avoids vendor lock-ins or designs a solid Identity \& Access Management (IAM) environment \cite{securityAlliancerep}.
 \paragraph{Insecure Third Party Resources}
 
-As mentioned in \cite{securityAlliancerep}, modern cloud environments depend on third-party resources for providing a service (SaaS), including use of open source tools, or Software as a Service product.
-
-In addition, this threat is called as Cybersecurity Supply Chain Risk Management because third-party resources are part of the service that a company provides; therefore, the service is in risk if one external element is compromised \cite{securityAlliancerep}.
-
+As mentioned in \cite{securityAlliancerep}, modern cloud environments depend on third-party resources for providing a service (SaaS), including use of open source tools, or a Software as a Service product.
+In addition, this threat is called Cybersecurity Supply Chain Risk Management because third-party resources are part of the service that a company provides;
+therefore, the service is at risk if one external element is compromised \cite{securityAlliancerep}.
 \begin{itemize}
-    \item \textit{Impact for the business:} As detailed in \cite{securityAlliancerep}, due to third-party vulnerabilities different elements of the organization are affected; for example, data could be compromised in their confidentiality and integrity pillars, the confidence could be affected because customers may think that the company is not trustworthy or there could be an unauthorized access to the system through an external resource.  
+    \item \textit{Impact for the business:} As detailed in \cite{securityAlliancerep}, due to third-party vulnerabilities different elements of the organization are affected;
+for example, data could be compromised in their confidentiality and integrity pillars, the confidence could be affected because customers may think that the company is not trustworthy or there could be an unauthorized access to the system through an external resource.
 \end{itemize}
 
-It is important to manage all of the third-party tools that are used within the organization, using software officially supported, making periodic reviews of the tools used in the organization and collaborate with suppliers to ensure mutual compliance and best practices use \cite{securityAlliancerep}.
-
+It is important to manage all the third-party tools that are used within the organization, using software officially supported, making periodic reviews of the tools used in the organization and collaborating with suppliers to ensure mutual compliance and best practices use \cite{securityAlliancerep}.
 \paragraph{Insecure Software Development}
 
-As described in \cite{securityAlliancerep}, it is necessary to implement a secure approach for avoiding creating vulnerabilities in multiple products. 
-
+As described in \cite{securityAlliancerep}, it is necessary to implement a secure approach for avoiding creating vulnerabilities in multiple products.
 \begin{itemize}
-    \item \textit{Approaches for secure develop:} According to \cite{securityAlliancerep}, the companies should implement different strategies for improving the development cycle; for instance, establish a cloud-first approach, implement methodologies for continuous developing an integration or capacitate developers in shared responsibility model.
-    \item \textit{Impact for the business:} An insecure software development could leads in multiple impacts for integrity and confidentiality pillar for data \cite{securityAlliancerep}. In addition, fixing bugs could delay the integration of new features and impact operational processes \cite{securityAlliancerep}.
+    \item \textit{Approaches for secure development:} According to \cite{securityAlliancerep}, the companies should implement different strategies for improving the development cycle;
+for instance, establish a cloud-first approach, implement methodologies for continuous development and integration or train developers in the shared responsibility model.
+\item \textit{Impact for the business:} An insecure software development could lead to multiple impacts for the integrity and confidentiality pillars for data \cite{securityAlliancerep}.
+In addition, fixing bugs could delay the integration of new features and impact operational processes \cite{securityAlliancerep}.
 \end{itemize}
 
-Some recommendations include establishing a secure development lifecycle for identifying vulnerabilities in an early stage \cite{securityAlliancerep}, use cloud technologies to develop safer programs and understand the responsibility model and contact with the cloud service provider for orientation \cite{securityAlliancerep}. 
-
+Some recommendations include establishing a secure development lifecycle for identifying vulnerabilities at an early stage \cite{securityAlliancerep}, using cloud technologies to develop safer programs and understanding the responsibility model and contacting the cloud service provider for guidance \cite{securityAlliancerep}.
 \paragraph{Accidental Data Disclosure}
 
-As detailed in \cite{securityAlliancerep}, data disclosure is closely related with misconfigurations and allows that sensitive data could be accessed through free search tools. 
-
-These exposures usually happen with storage services of different Cloud Service Providers \cite{securityAlliancerep}, and only in 2024 were exposed that 21,1\% of these buckets had sensitive data that could include passport information, biometrics or passwords \cite{securityAlliancerep}.
-
+As detailed in \cite{securityAlliancerep}, data disclosure is closely related to misconfigurations and allows sensitive data to be accessed through free search tools.
+These exposures usually happen with storage services of different Cloud Service Providers \cite{securityAlliancerep}, and only in 2024 it was exposed that 21.1\% of these buckets had sensitive data that could include passport information, biometrics or passwords \cite{securityAlliancerep}.
 \begin{itemize}
-    \item \textit{Impact for the business:} As reported by \cite{securityAlliancerep}, accidental data disclosures affects the confidentiality pillar, and could lead into severe fines due to data regulations.
+    \item \textit{Impact for the business:} As reported by \cite{securityAlliancerep}, accidental data disclosures affect the confidentiality pillar, and could lead to severe fines due to data regulations.
 \end{itemize}
 
-As reported by \cite{securityAlliancerep}, some suggestions include implementing security basic configurations, robust educational programs and plan and identity and access management environment properly. 
-
+As reported by \cite{securityAlliancerep}, some suggestions include implementing basic security configurations, robust educational programs and planning the identity and access management environment properly.
 \paragraph{System Vulnerabilities}
 
-This threat refers to security breaches within cloud systems that could be exploited to affect confidentiality, integrity and availability pillars \cite{securityAlliancerep}. 
-
+This threat refers to security breaches within cloud systems that could be exploited to affect the confidentiality, integrity and availability pillars \cite{securityAlliancerep}.
 As described in \cite{securityAlliancerep}, there are different categories for system vulnerabilities:
 \begin{itemize}
-    \item \textit{Misconfiguration:} Threats increase significantly with default or bad configurations \cite{securityAlliancerep}.  
-    \item \textit{Zero-day Vulnerabilities:} This threat refers to system vulnerabilities discovered by malicious actors that are unknown for cloud service providers or software vendors \cite{securityAlliancerep}.
-    \item \textit{Unpatched Software:} Software that has known vulnerabilities that have not been fixed despite resources for solving the failure \cite{securityAlliancerep}.
-    \item \textit{Weak of Default Credentials:} This refers to lack of robust authentication processes that allows access to unauthorized actors \cite{securityAlliancerep}.  
+    \item \textit{Misconfiguration:} Threats increase significantly with default or bad configurations \cite{securityAlliancerep}.
+\item \textit{Zero-day Vulnerabilities:} This threat refers to system vulnerabilities discovered by malicious actors that are unknown to cloud service providers or software vendors \cite{securityAlliancerep}.
+\item \textit{Unpatched Software:} Software that has known vulnerabilities that have not been fixed despite resources for solving the failure \cite{securityAlliancerep}.
+\item \textit{Weak or Default Credentials:} This refers to a lack of robust authentication processes that allows access to unauthorized actors \cite{securityAlliancerep}.
 \end{itemize}
 
-As detailed in \cite{securityAlliancerep}, some recommendations include continuous monitoring of the system, auditing for covering vulnerabilities before hackers and implementing a zero trust architecture through constant authentication to protect access to sensitive resources.   
+As detailed in \cite{securityAlliancerep}, some recommendations include continuous monitoring of the system, auditing for covering vulnerabilities before hackers and implementing a zero trust architecture through constant authentication to protect access to sensitive resources.
+\paragraph{Limited Cloud Visibility/Observability}
 
-\paragraph{Limited Cloud Visibility/Obervability}
-
-This threat describes that an organizations does not visualize and analyze if the cloud services are user properly \cite{securityAlliancerep}. In addition, \cite{securityAlliancerep} details that are two scenarios; non-authorized application use and authorized application misuse \cite{securityAlliancerep}.
-
+This threat describes that an organization does not visualize and analyze if the cloud services are used properly \cite{securityAlliancerep}.
+In addition, \cite{securityAlliancerep} details that there are two scenarios; non-authorized application use and authorized application misuse \cite{securityAlliancerep}.
 \begin{itemize}
     \item \textit{Non-Authorized application use:} This scenario occurs when employees utilize applications without company's support or security measures, and it is risky when confidential information is involved \cite{securityAlliancerep}.
-    \item \textit{Authorized application misuse:} On the other hand, in this context when organizations do not manage suitably how approved applications are used by employees or targeted by malicious actors \cite{securityAlliancerep}.
-    \item \textit{Impact for the business:} According to \cite{securityAlliancerep}, some impacts include weak security due to lack of control for non visible issues, business interruptions for customers and partners and lost revenue because of restoration or control costs. 
+\item \textit{Authorized application misuse:} On the other hand, this context occurs when organizations do not manage suitably how approved applications are used by employees or targeted by malicious actors \cite{securityAlliancerep}.
+\item \textit{Impact for the business:} According to \cite{securityAlliancerep}, some impacts include weak security due to lack of control for non-visible issues, business interruptions for customers and partners and lost revenue because of restoration or control costs.
 \end{itemize}
 
-As described in \cite{securityAlliancerep}, it is recommended to use a top-down approach cloud strategy to include people, processes and technology within cloud architecture. In addition, it is critical to train employees in cloud corporative environment and manage enterprise cloud applications effectively \cite{securityAlliancerep}.
-
+As described in \cite{securityAlliancerep}, it is recommended to use a top-down cloud strategy approach to include people, processes and technology within the cloud architecture.
+In addition, it is critical to train employees in the cloud corporative environment and manage enterprise cloud applications effectively \cite{securityAlliancerep}.
 \paragraph{Unauthenticated Resource Sharing}
 
-As detailed in \cite{securityAlliancerep}, this threat involves a weak authentication process for cloud resources, such as virtual machines or storage services that contain sensitive data. 
-
-In addition, \cite{securityAlliancerep} describe some security measures and impact for the business of this threat:
+As detailed in \cite{securityAlliancerep}, this threat involves a weak authentication process for cloud resources, such as virtual machines or storage services that contain sensitive data.
+In addition, \cite{securityAlliancerep} describes some security measures and impact for the business of this threat:
 \begin{itemize}
-    \item \textit{Multi-factor authentication (MFA):} When a user access to a resource, it is required a second authorization method that could include one-time code or biometrics \cite{securityAlliancerep}.
-    \item \textit{Third-party authentication platforms:} As reported by \cite{securityAlliancerep}, using external services improve user management and give a user-friendly authorization process for company members.
-    \item \textit{Managing user access:} Users should only access to the resources that they require \cite{securityAlliancerep}.
-    \item \textit{Continual monitoring activity:} It is critical to monitor any suspicious activity of any user \cite{securityAlliancerep}.
-    \item \textit{Impact for the business:} As described in \cite{securityAlliancerep}, some impacts include compromise of confidentiality and availability data pillar, impacts in operational business in securing these shared points or reputational damage due to this security breach.
+    \item \textit{Multi-factor authentication (MFA):} When a user accesses a resource, a second authorization method is required that could include a one-time code or biometrics \cite{securityAlliancerep}.
+\item \textit{Third-party authentication platforms:} As reported by \cite{securityAlliancerep}, using external services improves user management and gives a user-friendly authorization process for company members.
+\item \textit{Managing user access:} Users should only access the resources that they require \cite{securityAlliancerep}.
+\item \textit{Continual monitoring activity:} It is critical to monitor any suspicious activity of any user \cite{securityAlliancerep}.
+\item \textit{Impact for the business:} As described in \cite{securityAlliancerep}, some impacts include compromise of the confidentiality and availability data pillars, impacts on operational business in securing these shared points or reputational damage due to this security breach.
 \end{itemize}
 
-Finally, \cite{securityAlliancerep} details that at least basic password authentication should be implemented, including MFA tools from third-party vendors and analyze user actions.
+Finally, \cite{securityAlliancerep} details that at least basic password authentication should be implemented, including MFA tools from third-party vendors and analyzing user actions.
+\paragraph{Advanced Persistent Threats}
 
-\paragraph{Avdanced Persistent Threats}
-
-As describes in \cite{securityAlliancerep}, Advanced Persistent Threats (ATPs) compose different sophisticated adversaries that have resources and knowledge to deploy a long-term attack targeting important assets. 
-
+As described in \cite{securityAlliancerep}, Advanced Persistent Threats (APTs) are composed of different sophisticated adversaries that have resources and knowledge to deploy a long-term attack targeting important assets.
 Usually, APTs include nation-state agencies or organized criminal gangs that have been increasing their attacks exploiting zero-day vulnerabilities, third-party vendor resources or identity and access management environments \cite{securityAlliancerep}.
-
 \begin{itemize}
-    \item \textit{Impact for the business:} Some impacts include a higher exposition from not addressed ATPs, reputational damage due to a big exposure of the attack or business disruptions because of different threat scenarios \cite{securityAlliancerep}.
+    \item \textit{Impact for the business:} Some impacts include a higher exposition from not addressed APTs, reputational damage due to a big exposure of the attack or business disruptions because of different threat scenarios \cite{securityAlliancerep}.
 \end{itemize}
 
-As described in \cite{securityAlliancerep}, an organization should identify critical assets and potential vulnerabilities, participate in information groups about most dangerous ATPs groups and simulate security offensives to test and improve the architecture.
-
+As described in \cite{securityAlliancerep}, an organization should identify critical assets and potential vulnerabilities, participate in information groups about the most dangerous APTs groups and simulate security offensives to test and improve the architecture.
 % -------------------------------- %
 
 % Metodología
 \section{Methodology}
-To develop the literature review within cloud security environment is used a structured search. In addition, \textit{Google Scholar} is used as database source information due to its large number of indexed publications.
+To develop the literature review within the cloud security environment a structured search is used.
+In addition, \textit{Google Scholar} is used as the database source information due to its large number of indexed publications.
 \subsection{Search Strategy}
-It is used a \textit{boolean search} for limiting the results and collecting higher quality results:
+A \textit{boolean search} is used for limiting the results and collecting higher quality results:
 \textit{("AWS" OR "Azure" OR "GCP") AND ("IaaS" OR "PaaS" OR "Saas") AND ("vulnerabilities" OR "threats" OR "misconfigurations" OR "IAM") AND ("survey" OR "systematic review" OR "analysis")}.
-
 \paragraph{Inclusion Criteria:} Inclusion criteria includes the following requirements:
 \begin{itemize}
     \item Publication between 2019-2025.
-    \item Open access or limited access via email login.
+\item Open access or limited access via email login.
     \item Most cited publications.
-    \item Surveys, technical analyses or systematic reviews. 
+    \item Surveys, technical analyses or systematic reviews.
 \end{itemize}
 
-\paragraph{Exclusiona Criteria:} Exclusions criteria includes the following requirements:
+\paragraph{Exclusion Criteria:} Exclusion criteria includes the following requirements:
 \begin{itemize}
-    \item Documents with paywalls access to the full content. 
-    \item Non related documents with cloud security; for instance, hardware, economics, etc.
+    \item Documents with paywalls access to the full content.
+\item Documents not related to cloud security; for instance, hardware, economics, etc.
 \end{itemize}
 
 \section{State of the Art}
