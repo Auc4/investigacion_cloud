@@ -43,7 +43,7 @@ Text...
 \subsection{Cloud Computing Essentials}
 \label{sec:cloud_essentials}
 
-Cloud computing (CC) is defined as the delivery of computing resources over the internet;
+Cloud computing (CC) is defined as the delivery of computing resources over the internet \cite{OverviewAmazonWeb2025};
 including compute power, storage, and databases \cite{OverviewAmazonWeb2025}. This service is based on two main aspects: the on-demand delivery of these assets, and a pay-as-you-go pricing model \cite{OverviewAmazonWeb2025}.
 This service has changed how organizations offer their services because with CC a user can access their files from any device, which is running on a remote server rather than being locally stored.
 This makes it possible to store terabytes of data or stream thousands of movies \cite{cloudflareWhatCloudCloud}.
@@ -320,20 +320,80 @@ A \textit{boolean search} is used for limiting the results and collecting higher
 \end{itemize}
 
 \section{State of the Art}
-\subsection{Risk Taxonomy and Advanced Vulnerabilities}
 
-\subsection{Security Components and Risk Mitigation}
+The State of the Art (SOTA) in cloud cybersecurity addresses the theoretical context, current threats, business impact, and mitigation and innovation strategies \cite{sureshkumarStudyCloudSecurity2021}, \cite{fadhilSecurityPrivacyIssues}, \cite{Sehgal2023CloudSecurityScalability}.
 
-\subsection{Comparative Analysis Between Service Providers}
+\subsection{Framework and Fundamentals}
+The context of cloud cybersecurity is driven by the need for \textbf{flexible and adaptive security models} \cite{mendozaEXPLORINGIMPACTSHARED2023}. The theoretical pillars are based on the Security Principles (\textbf{CIA: Confidentiality, Integrity, Availability}). A fundamental concept is the \textbf{Shared Responsibility Model} \cite{mendozaEXPLORINGIMPACTSHARED2023}, along with the service and deployment models. The relevance of security on cloud platforms stems from the fact that information security threats are becoming increasingly complex and sophisticated.
 
-\subsection{Emerging Trends and Future of Cloud Security}
+\subsection{Current Threat and Vulnerability Landscape}
+The current landscape includes \textbf{sophisticated risks} such as \textbf{Distributed Denial of Service (DDoS) attacks}, \textit{phishing}, data leakage, insider threats, and \textbf{API vulnerabilities} \cite{Sehgal2023CloudSecurityScalability}, \cite{mpdiCyberattCloud}, \cite{SotaPericherlaCloudThreats}, \cite{Sharma2021IssuesCloud}.
 
+The \textbf{primary cause of incidents} are \textbf{misconfigurations} \cite{metibemuDevelopingProactiveThreat2025}, responsible for up to $80\%$ of incidents \cite{mpdiCyberattCloud}. The most frequent misconfiguration types are:
+\begin{enumerate}
+    \item \textbf{Identity and Access Management (IAM) Errors:} This is the primary attack vector and the most frequent misconfiguration, with \textbf{183 occurrences} in financial SaaS applications \cite{nerellaAutomatedComplianceEnforcement2025}.
+    \item \textbf{Exposed or Insecure APIs:} The second most common misconfiguration (\textbf{156 occurrences}) \cite{alouffiSystematicLiteratureReview2021}. Insecure APIs are a significant vulnerability because they can be exploited to obtain unauthorized access or manipulate data \cite{Sehgal2023CloudSecurityScalability}.
+    \item \textbf{Public Storage Configuration:} Notable examples include \textbf{AWS S3 buckets configured as "public"} \cite{mendozaEXPLORINGIMPACTSHARED2023}.
+    \item \textbf{Absence or Weakness of Authentication:} Facilitates \textit{account hijacking} and \textit{phishing} (e.g., lack of Multi-Factor Authentication (MFA)) \cite{yosumazExaminationCyberSecurity2024}.
+\end{enumerate}
 
-\section{Results and Discussions}
-Text...
+The landscape also includes \textbf{Advanced Persistent Threats (APTs)}, \textit{Ransomware}, and \textit{Zero-day vulnerabilities}, which pose significant risks to data security \cite{fadhilSecurityPrivacyIssues}, \cite{Sharma2021IssuesCloud}, \cite{Sehgal2023CloudSecurityScalability}, \cite{mpdiCyberattCloud}, \cite{SotaPericherlaCloudThreats}.
 
-\section{Conclusions}
-Text...
+\subsection{Business Impact and Consequences}
+The consequences of security failures fall into two main areas:
+\begin{enumerate}
+    \item \textbf{Financial and Operational Impact:} High-severity misconfigurations (scores 7 to 10) result in an \textbf{average financial loss of \$7.6 million} \cite{mpdiCyberattCloud}. Compromised records can increase up to six times in severe incidents \cite{SotaPericherlaCloudThreats}. Security breaches can also lead to significant financial losses, damage to reputation, and legal consequences for organizations \cite{soniCloudComputingSecurity2025}.
+    \item \textbf{Regulatory and Compliance Impact:} Regulatory fines average \textbf{\$2.5 million} for high severity incidents \cite{mpdiCyberattCloud}. Key regulations financial institutions must comply with include \textbf{GDPR} and \textbf{HIPAA} \cite{nerellaAutomatedComplianceEnforcement2025}, \cite{ilochonwuCloudSecurityParadigms2024}. Compliance requires continuous monitoring and enforcement of strict policies \cite{nerellaAutomatedComplianceEnforcement2025}.
+\end{enumerate}
+
+\subsection{Mitigation Strategies and Innovative Trends}
+Mitigation strategies are based on fundamental pillars and technological trends \cite{yosumazExaminationCyberSecurity2024}:
+\begin{enumerate}
+    \item \textbf{Fundamental Pillars of Mitigation:} Include \textbf{data encryption} (at rest and in transit) for Confidentiality and Integrity \cite{Sharma2021IssuesCloud}, strong \textbf{IAM, MFA, and RBAC} \cite{metibemuDevelopingProactiveThreat2025}, \cite{yosumazExaminationCyberSecurity2024}, and continuous monitoring and auditing for real-time threat detection \cite{sureshkumarStudyCloudSecurity2021}.
+    \item \textbf{Technological Trends (SOTA):}
+    \begin{itemize}
+        \item \textbf{Zero Trust Architecture (ZTA):} Eliminates implicit trust and requires \textbf{continuous verification} \cite{metibemuDevelopingProactiveThreat2025}, applying the Principle of Least Privilege (PoLP) \cite{yosumazExaminationCyberSecurity2024}.
+        \item \textbf{Cloud Security Posture Management (CSPM):} Automates the \textbf{detection and remediation of misconfigurations in real time} \cite{metibemuDevelopingProactiveThreat2025}.
+        \item \textbf{Artificial Intelligence (AI) and Machine Learning (ML):} Enhances threat detection efficiency, anomaly identification, and predictive analysis \cite{mthunziMobileAppCloud2025}, \cite{metibemuDevelopingProactiveThreat2025}.
+        \item \textbf{Confidential Computing:} Allows sensitive data to be processed while remaining encrypted, even during execution \cite{metibemuDevelopingProactiveThreat2025}.
+        \item \textbf{Blockchain Technologies:} Used to guarantee the integrity of the data and offer \textbf{immutable audit trails} \cite{hashimSecuringCloudComputing2024}, \cite{fadeleCybersecurityModelIntelligent2024}, \cite{janetjuliaangudiSecurityChallengesCloud2023a}, \cite{mykhaylovaResearchAnalysisIssues2024}, \cite{},\cite{Sharma2021IssuesCloud}, \cite{yosumazExaminationCyberSecurity2024}, \cite{ilochonwuCloudSecurityParadigms2024}, \cite{mendozaEXPLORINGIMPACTSHARED2023}, \cite{metibemuDevelopingProactiveThreat2025}, \cite{nerellaAutomatedComplianceEnforcement2025}, \cite{alouffiSystematicLiteratureReview2021}, \cite{mpdiCyberattCloud}, \cite{SotaPericherlaCloudThreats}, \cite{Sharma2021IssuesCloud}, \cite{Sehgal2023CloudSecurityScalability}, \cite{fadhilSecurityPrivacyIssues}, \cite{mthunziMobileAppCloud2025}.
+    \end{itemize}
+\end{enumerate}
+
+\section{Discussion}
+The discussion in cloud cybersecurity focuses on the comparative analysis of the strategies of the leading providers, the necessity of adaptive security models, and the implementation of innovative technologies to mitigate persistent threats \cite{SureshkumarStudyCloudSecurity2021}, \cite{fadhilSecurityPrivacyIssues}, \cite{Sehgal2023CloudSecurityScalability}.
+
+\subsection{The Need for Adaptive Security Models}
+The constant evolution of cyber threats conditions the relevance of cloud data security. New attack methods require the development of advanced protection mechanisms and the \textbf{adaptation of existing security approaches} \cite{SureshkumarStudyCloudSecurity2021}, \cite{Sharma2021IssuesCloud}. The complexity in managing security increases when critical information is stored and processed on external servers \cite{fadhilSecurityPrivacyIssues}. Therefore, security models must be \textbf{flexible and adaptive} to respond to new challenges in a constantly evolving threat landscape \cite{mendozaEXPLORINGIMPACTSHARED2023}, \cite{SureshkumarStudyCloudSecurity2021}, \cite{fadhilSecurityPrivacyIssues}, \cite{Sharma2021IssuesCloud}, \cite{Sehgal2023CloudSecurityScalability}, \cite{yosumazExaminationCyberSecurity2024}.
+
+\subsection{Comparative Analysis of Cloud Service Providers (CSPs)}
+The security models of leading CSPs (AWS, Azure, GCP, IBM Cloud, and Oracle Cloud) are compared based on crucial security aspects such as data encryption, access management, and innovation \cite{nerellaAutomatedComplianceEnforcement2025}.
+
+\subsubsection{Leadership and Strengths}
+\begin{itemize}
+    \item \textbf{AWS} is a leader in the cloud computing market, offering a wide range of services and deep integration of security measures, actively utilizing \textbf{ML and AI} \cite{nerellaAutomatedComplianceEnforcement2025}.
+    \item \textbf{Azure} emphasizes identity and access management with Azure Active Directory and provides solid support for compliance with international standards \cite{nerellaAutomatedComplianceEnforcement2025}.
+    \item \textbf{GCP} stands out for its innovative security approaches, including the automatic \textbf{encryption of all data at rest} \cite{nerellaAutomatedComplianceEnforcement2025}, offering detailed security and compliance reports, and leading in innovation and adaptability along with AWS \cite{nerellaAutomatedComplianceEnforcement2025}.
+    \item \textbf{IBM Cloud and Oracle Cloud} offer specialized solutions, focusing on sectors with high data protection requirements, such as finance and healthcare \cite{nerellaAutomatedComplianceEnforcement2025}. IBM Cloud highlights Confidential Computing \cite{metibemuDevelopingProactiveThreat2025}, and Oracle Cloud focuses on database protection \cite{nerellaAutomatedComplianceEnforcement2025}.
+\end{itemize}
+
+\subsubsection{Challenges and Vulnerabilities}
+\begin{itemize}
+    \item A common challenge is the \textbf{reliance on correct user configuration}, which has led to severe incidents, such as the exposure of 6 million Verizon customers due to incorrectly configured AWS S3 storage \cite{mendozaEXPLORINGIMPACTSHARED2023}. This underscores the critical importance of proper configuration and access management \cite{mendozaEXPLORINGIMPACTSHARED2023}.
+    \item AWS and Azure require significant effort for incident response configuration and monitoring \cite{mthunziMobileAppCloud2025}.
+    \item IBM Cloud and Oracle Cloud are often perceived as \textbf{costly and complex} to configure for small and medium enterprises (SMEs) \cite{nerellaAutomatedComplianceEnforcement2025}.
+\end{itemize}
+
+\subsection{Advanced Mitigation Strategies and Innovation}
+Effective risk mitigation requires the adoption of advanced architectures and technologies \cite{metibemuDevelopingProactiveThreat2025}:
+\begin{itemize}
+    \item \textbf{Adoption of Proactive Architectures:} \textbf{Zero Trust Architecture (ZTA)} is crucial, enforcing continuous verification and the Principle of Least Privilege (PoLP) \cite{metibemuDevelopingProactiveThreat2025}, \cite{yosumazExaminationCyberSecurity2024}.
+    \item \textbf{Automation of Security Posture:} \textbf{CSPM tools} (like AWS Macie, Azure Purview, and GCP DLP) automate the \textbf{detection and remediation of misconfigurations in real time} \cite{metibemuDevelopingProactiveThreat2025}.
+    \item \textbf{Secure Data Technologies:} \textbf{Confidential Computing} allows processing sensitive data while remaining encrypted \cite{metibemuDevelopingProactiveThreat2025}.
+    \item \textbf{Use of AI/ML and Blockchain:} AI/ML improves threat detection and anomaly identification \cite{mthunziMobileAppCloud2025}, \cite{metibemuDevelopingProactiveThreat2025}. Blockchain offers data integrity and \textbf{immutable audit trails} \cite{hashimSecuringCloudComputing2024}, \cite{fadeleCybersecurityModelIntelligent2024}, \cite{janetjuliaangudiSecurityChallengesCloud2023a}, \cite{mykhaylovaResearchAnalysisIssues2024}, \cite{SoniCloudComputingSecurity2025}, \cite{SureshkumarStudyCloudSecurity2021}, \cite{yosumazExaminationCyberSecurity2024}, \cite{ilochonwuCloudSecurityParadigms2024}, \cite{mendozaEXPLORINGIMPACTSHARED2023}, \cite{metibemuDevelopingProactiveThreat2025}, \cite{nerellaAutomatedComplianceEnforcement2025}, \cite{alouffiSystematicLiteratureReview2021}, \cite{mpdiCyberattCloud}, \cite{SotaPericherlaCloudThreats}, \cite{Sharma2021IssuesCloud}, \cite{Sehgal2023CloudSecurityScalability}, \cite{fadhilSecurityPrivacyIssues}, \cite{mthunziMobileAppCloud2025}.
+\end{itemize}
+In conclusion, although the leading providers offer a high level of security, the \textbf{responsibility for data protection rests with both the provider and the user} \cite{mendozaEXPLORINGIMPACTSHARED2023}. Successful implementation requires a comprehensive approach combining robust technical solutions with a clear understanding of the shared responsibility model and continuous investment in innovative trends \cite{mendozaEXPLORINGIMPACTSHARED2023}.
+
 
 % ----- REFERENCIAS -----
 \printbibliography
