@@ -10,12 +10,12 @@
 \title{Security in Cloud}
 
 \author{
-    \IEEEauthorblockN{1\textsuperscript{st} Nombre Autor}
+    \IEEEauthorblockN{1\textsuperscript{st} Sebastián Aucapiña}
     \IEEEauthorblockA{
-        \textit{Nombre Escuela} \\
-        \textit{Nombre Universidad} \\
-        Ciudad, País \\
-        email@ejemplo.com
+        \textit{School of Computer Science} \\
+        \textit{Universidad Internacional del Ecuador} \\
+        Quito, Ecuador \\
+        seaucapinava@uide.edu.ec
     }
 }
 
@@ -326,10 +326,10 @@ The current state of cloud security is characterized by a high degree of technol
 Cloud environments demand strict technical and operational requirements, including robust virtualization, elasticity, and flexible service models. A core necessity is the provision of secure communication channels, including \textit{strong authentication and encryption}, as well as rigorous separation between tenants in multi-tenancy scenarios \cite{ilochonwuCloudSecurityParadigms2024, SotaPericherlaCloudThreats}.
 
 \subsection{Threat and Vulnerability Landscape}
-The literature identifies key risks such as data breaches, data manipulation, unauthorized access, and insecure interfaces \cite{alouffiSystematicLiteratureReview2021, mpdiCyberattCloud, SotaPericherlaCloudThreats}. The complexity of the threat landscape is exacerbated by the convergence of mobile, application, and cloud domains, creating intertwined attack surfaces that facilitatemulti-stage breaches \cite{mthunziMobileAppCloud2025}. Additionally, a detailed investigation reveals that security issues are highly dependent on the service model, with IaaS infrastructures having specific vulnerabilities related to virtualization and hypervisor attacks, while PaaS and SaaS face greater risks from insecure APIs and weak access controls \cite{Sharma2021IssuesCloud, yosumazExaminationCyberSecurity2024}. Recurring threats like Account Hijacking and Malware Injection are consistently highlighted, often exploiting common misconfigurations and inadequate interfaces \cite{mykhaylovaResearchAnalysisIssues2024}. A critical vulnerability arises from the shared nature of resources in \textbf{Multi-tenancy} environments, where insufficient isolation can lead to side-channel attacks and resource depletion, often cited as a significant technical risk \cite{alouffiSystematicLiteratureReview2021}. Other recurrent issues include misconfiguration, insecure APIs, privilege escalation, and attacks at the hypervisor level \cite{SotaPericherlaCloudThreats}.
+The literature identifies key risks such as data breaches, data manipulation, unauthorized access, and insecure interfaces \cite{alouffiSystematicLiteratureReview2021, mpdiCyberattCloud, SotaPericherlaCloudThreats}. The complexity of the threat landscape is exacerbated by the convergence of mobile, application, and cloud domains, creating intertwined attack surfaces that facilitatemulti-stage breaches \cite{mthunziMobileAppCloud2025}. Additionally, a detailed investigation reveals that security issues are highly dependent on the service model, with IaaS infrastructures having specific vulnerabilities related to virtualization and hypervisor attacks, while PaaS and SaaS face greater risks from insecure APIs and weak access controls \cite{Sharma2021IssuesCloud, yosumazExaminationCyberSecurity2024}. Recurring threats like Account Hijacking and Malware Injection are consistently highlighted, often exploiting common misconfigurations and inadequate interfaces \cite{mykhaylovaResearchAnalysisIssues2024}. A critical vulnerability arises from the shared nature of resources in \textit{Multi-tenancy} environments, where insufficient isolation can lead to side-channel attacks and resource depletion, often cited as a significant technical risk \cite{alouffiSystematicLiteratureReview2021}. Other recurrent issues include misconfiguration, insecure APIs, privilege escalation, and attacks at the hypervisor level \cite{SotaPericherlaCloudThreats}.
 
 \subsection{Business Impact and Consequences}
-Security failures lead to a range of severe consequences for organizations, including operational disruption, loss of customer trust, regulatory sanctions (e.g., GDPR), and significant financial losses \cite{mpdiCyberattCloud, alouffiSystematicLiteratureReview2021}. The recurrent failure point is often attributed to \textbf{misconfiguration} \cite{alouffiSystematicLiteratureReview2021}. A systemic risk factor is the \textbf{misinterpretation of the Shared Responsibility Model}, which shifts certain critical security tasks to the client, leading to oversight and exposure \cite{alouffiSystematicLiteratureReview2021, mendozaEXPLORINGIMPACTSHARED2023}. Furthermore, addressing dynamic regulatory requirements (e.g., GDPR, HIPAA) in multi-cloud environments necessitates the implementation of automated compliance enforcement solutions, as manual processes are often insufficient and not scalable to mitigate the persistent risk of non-conformity \cite{nerellaAutomatedComplianceEnforcement2025}.
+Security failures lead to a range of severe consequences for organizations, including operational disruption, loss of customer trust, regulatory sanctions (e.g., GDPR), and significant financial losses \cite{mpdiCyberattCloud, alouffiSystematicLiteratureReview2021}. The recurrent failure point is often attributed to \textit{misconfiguration} \cite{alouffiSystematicLiteratureReview2021}. A systemic risk factor is the \textit{misinterpretation of the Shared Responsibility Model}, which shifts certain critical security tasks to the client, leading to oversight and exposure \cite{alouffiSystematicLiteratureReview2021, mendozaEXPLORINGIMPACTSHARED2023}. Furthermore, addressing dynamic regulatory requirements (e.g., GDPR, HIPAA) in multi-cloud environments necessitates the implementation of automated compliance enforcement solutions, as manual processes are often insufficient and not scalable to mitigate the persistent risk of non-conformity \cite{nerellaAutomatedComplianceEnforcement2025}.
 
 \subsection{Mitigation Strategies and Innovative Trends}
 To counteract these challenges, the consensus is a multi-layered approach emphasizing automation and proactive management.
@@ -364,10 +364,71 @@ Future security models prioritize adaptation, automation, and advanced computati
 \end{itemize}
 
 \section{Discussion}
+\label{sec:discussion}
 
+The analysis presented in the State of the Art reveals a critical paradox in cloud computing security: while cloud environments offer inherent security advantages (e.g., professional management of physical infrastructure \cite{yosumazExaminationCyberSecurity2024}), the shift in the operational paradigm fundamentally introduces new, systemic risks rooted in shared responsibility and human factors \cite{mendozaEXPLORINGIMPACTSHARED2023, metibemuDevelopingProactiveThreat2025}.
+
+\subsection{The Dominance of Human Error and Misconfiguration}
+
+The most persistent threat across all service models is human-induced misconfiguration \cite{metibemuDevelopingProactiveThreat2025, SotaPericherlaCloudThreats, mpdiCyberattCloud}. Empirical data strongly support that organizational failure to properly manage the Shared Responsibility Model is the primary driver of risk \cite{mendozaEXPLORINGIMPACTSHARED2023, metibemuDevelopingProactiveThreat2025}.
+\begin{itemize}
+    \item \textbf{Quantifiable Impact:} Misconfigurations, particularly Identity and Access Management (IAM) errors (183 occurrences) and exposed APIs (156 occurrences), are the most frequent security failures in financial SaaS applications. An increase in misconfiguration severity results in an average of \$2.27M in financial losses and 93,300 compromised records.
+    \item \textbf{The Root Cause:} This high frequency is attributable to human error, inadequate security awareness, and reliance on manual configuration processes prone to error. This deficiency translates easily into security gaps, particularly because IAM solutions offered by cloud service providers (CSPs) are complex and prone to misinterpretation by clients.
+    \item \textbf{SLAs vs. Security:} The issue is exacerbated by the non-quantitative nature of security and privacy, which makes them difficult to incorporate into measurable Service Level Agreements (SLAs). This leaves customers contractually exposed to failures that fall outside the typical uptime metrics prioritized by standard SLAs.
+\end{itemize}
+
+\subsection{Layer-Specific Security Challenges}
+
+Security requirements diverge significantly across the Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) models.
+
+\begin{itemize}
+    \item \textbf{IaaS and Core Isolation:} The core vulnerability in IaaS is rooted in Shared Technology Vulnerabilities, encompassing risks like VM Escape and attacks targeting the hypervisor layer. This burden of security shifts based on the deployment model: in public IaaS (e.g., AWS EC2), the CSP maintains the hypervisor security, whereas in private IaaS (e.g., Proxmox VE), the customer assumes full responsibility for the hardware and hypervisor layers.
+    \item \textbf{PaaS/SaaS and Access Control:} In PaaS and SaaS, the focus shifts away from infrastructure and towards application security, API security, and identity management. Attacks are often centered on the application logic or user credentials rather than the underlying virtualization layer.
+    \item \textbf{Operational Differences:} Public IaaS typically provides high security features, such as IDS/IPS and Web Application Firewalls (WAF), integrated and managed by the vendor on a pay-as-you-go basis. Conversely, equivalent advanced solutions in private IaaS often require manual deployment and expert configuration of third-party tools like Snort.
+\end{itemize}
+
+\subsection{The Role of Automation and Intelligent Mitigation}
+
+The complexity of the threat landscape makes automation an essential strategy to minimize human error and achieve real-time protection.
+
+\begin{itemize}
+    \item \textbf{AI-Enhanced Detection:} Advanced solutions, particularly those leveraging Artificial Intelligence (AI) and Machine Learning (ML), demonstrate superior efficacy. One experimental study showed that an AI-driven IDS (AWS GuardDuty) successfully detected malicious webshells, a capability often missed by less intelligent IDS solutions. The projected outcome is enhanced detection accuracy (up to 95\%) and significantly reduced response times (down to 10 seconds), suggesting a clear future direction for threat detection.
+    \item \textbf{Proactive Compliance:} For multi-cloud operations, automated compliance tools (like AWS Macie or GCP DLP) are critical, shifting the process from manual audits to continuous, intelligent data discovery and enforcement. This approach addresses the increasing regulatory burden (GDPR, HIPAA) that manual processes cannot scale to meet.
+    \item \textbf{The Next Generation of Defense:} Future mitigation strategies focus on protecting data \textit{in use} and ensuring auditability. This includes:
+    \begin{enumerate}
+        \item \textbf{Confidential Computing:} Protecting data during processing (memory and CPU) by keeping it encrypted in a Trusted Execution Environment (TEE), an important evolution from simple encryption at rest.
+        \item \textbf{Blockchain for Accountability:} Utilizing Distributed Ledger Technology (DLT) to create immutable audit trails, enhancing transparency, accountability, and enabling forensic research after an intrusion.
+        \item \textbf{Zero Trust Architecture (ZTA):} Enforcing continuous verification and the Principle of Least Privilege (PoLP) drastically reduces the vulnerability window, directly addressing the risks posed by compromised credentials and human error.
+    \end{enumerate}
+\end{itemize}
 
 \section{Conclusions}
-Text...
+\label{sec:conclusions}
+The systematic review and critical analysis of cloud security literature confirm that despite the technological maturity of major Cloud Service Providers (CSPs), cybersecurity remains the paramount concern for adoption, fundamentally challenged by systemic and human factors inherent to the cloud model. The findings lead to several key conclusions regarding risk posture, mitigation efficacy, and future strategic direction.
+
+\subsection{Risk Posture: The Misconfiguration Paradox}
+The primary vulnerability vector is not the compromise of the CSP's core infrastructure, but rather the failure of customers to manage their portion of the shared responsibility model.
+\begin{itemize}
+    \item \textbf{Quantifiable Impact:} Misconfiguration, dominated by IAM errors and insecure APIs, is the leading cause of breaches across IaaS, PaaS, and SaaS, driving significant financial losses and exposing millions of records. This empirical evidence underscores the high stakes associated with human error and policy misinterpretation.
+    \item \textbf{Systemic Vulnerabilities:} Core technical risks persist, particularly those related to resource isolation in multi-tenancy environments, where flaws can manifest as side-channel attacks, resource contention, and, in severe cases, VM escape vulnerabilities.
+    \item \textbf{SaaS Security:} In the Software-as-a-Service model, where customers rely most heavily on the provider, the main challenges revolve around data breaches, lack of user control/visibility, and maintaining regulatory compliance, emphasizing the criticality of trust and governance external to the application itself.
+\end{itemize}
+
+\subsection{Mitigation Efficacy and Operational Imperatives}
+Effective cybersecurity demands a shift from passive perimeter defense to proactive, layered, and context-aware strategies.
+\begin{itemize}
+    \item \textbf{Security as a Service (SECaaS):} The integration of Network Security as a Service (NSaaS) and similar SECaaS models is crucial for centralized monitoring and proactive defense, allowing organizations to deploy specialized tools (e.g., Snort, Honeypot) without compromising the inherent flexibility and scalability of the cloud platform.
+    \item \textbf{Automation is Mandatory:} Manual compliance and configuration management are neither scalable nor feasible in complex multi-cloud environments. The adoption of comprehensive solutions like Cloud Security Posture Management (CSPM) and the enforcement of Zero Trust Architecture (ZTA) reduce breach probability significantly by automating policy enforcement and continuous verification.
+    \item \textbf{AI for Superior Detection:} Artificial Intelligence and Machine Learning demonstrate superior efficacy in identifying novel and low-volume threats, as evidenced by AI-driven IDS solutions achieving higher accuracy and faster response times compared to traditional rule-based mechanisms.
+\end{itemize}
+
+\subsection{Future Research Directions}
+Future work should concentrate on addressing the core limitations of the current security landscape to ensure resilient and scalable solutions:
+\begin{itemize}
+    \item \textbf{Trusted Execution and Data in Use:} Further development and industry integration of \textbf{Confidential Computing} technologies are essential to protect data during processing (data in use), mitigating side-channel and insider threats that bypass current encryption protocols.
+    \item \textbf{Accountability and Forensics:} Research is needed to develop unified, cross-platform standards for **Blockchain-based auditing** to create immutable, verifiable log trails for forensic analysis and compliance enforcement across multi-cloud environments.
+    \item \textbf{Usability and Abstraction:} Future security frameworks must focus on reducing the complexity barrier for end-users, leveraging intelligent automation to translate high-level security goals (e.g., PoLP) into low-level, error-proof cloud configurations, effectively closing the gap between the shared responsibility model and human capability.
+\end{itemize}
 
 % ----- REFERENCIAS -----
 \printbibliography
