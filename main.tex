@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}    
 \usepackage[backend=biber,style=ieee]{biblatex}
 \usepackage{graphicx} 
+\usepackage{multirow}
 \addbibresource{references.bib} 
 
 \title{Security in Cloud}
@@ -25,18 +26,30 @@
 
 \maketitle
 
+
 \begin{abstract}
-    Text...
+    This paper analyzes the most common security issues in cloud computing, focusing on the critical role of the shared responsibility model and strategies to mitigate human error. A systematic literature review was conducted to establish a theoretical framework for cloud essentials, identify key vulnerabilities, and evaluate advanced mitigation strategies like Zero Trust and AI/ML applications. The findings reveal that the primary security challenge is human-induced misconfiguration and the misinterpretation of the Shared Responsibility Model, which leads to significant financial losses and data exposures across IaaS, PaaS, and SaaS models. Core technical risks, such as resource isolation flaws in multi-tenancy environments, also persist. We conclude that effective cloud security requires a mandatory shift from manual processes to proactive, automated solutions, including Cloud Security Posture Management (CSPM) and Artificial Intelligence-driven threat detection, to bridge the gap between human capability and the complexity of modern cloud architectures.
 \end{abstract}
 
 \begin{IEEEkeywords}
-    lorem, ipsum
+    Cloud security; Shared Responsibility Model; Misconfiguration; Human error; Zero Trust; Artificial Intelligence; Machine Learning; Cloud Security Posture Management (CSPM); Multi-tenancy; Resource isolation; IaaS; PaaS; SaaS; Threat detection; Automated security.
 \end{IEEEkeywords}
 
 \section{Introduction}
-Text...
 
-% -------------------------------- %
+Cloud computing has become established as a critical area in different industries around the world due to its multiple benefits, such as scalability, agility, or lower operational costs \cite{cloudflareWhatCloudCloud, metibemuDevelopingProactiveThreat2025}. However, different security challenges need to be addressed within this environment for developing a solid infrastructure that considers security within this environment \cite{mendozaEXPLORINGIMPACTSHARED2023}. The central problem lies in differentiating the responsibility between customers and cloud service providers (CSPs) \cite{mendozaEXPLORINGIMPACTSHARED2023,soniCloudComputingSecurity2025, Sharma2021IssuesCloud}, including different roles that they need to achieve depending on the service that is being contracted \cite{mendozaEXPLORINGIMPACTSHARED2023,soniCloudComputingSecurity2025, Sharma2021IssuesCloud}. Currently, the principal security challenge is misconfigurations caused by cloud customers rather than errors from the CSP \cite{metibemuDevelopingProactiveThreat2025}. The current scenario demonstrates the necessity to evaluate and investigate multiple solutions to mitigate threats that could affect an organization \cite{soniCloudComputingSecurity2025}.
+
+\paragraph{General Objective}
+
+Analyze and synthesize the most common security issues in cloud computing, detailing the importance of the shared responsibility model and mitigation strategies to counteract human error.
+
+\paragraph{Specific Objectives}
+
+\begin{itemize}
+\item Establish a theoretical framework where cloud computing essentials are explained, including definitions and the shared responsibility model.
+\item Identify and present the most common vulnerabilities within the cloud computing environment and contrast them with different works to analyze areas of improvement in cloud security.
+\item Evaluate emerging and advanced mitigation strategies, such as Zero Trust strategies, Machine Learning \& Artificial Intelligence applications, and their impact on securing organizational assets.
+\end{itemize}
 
 \section{Theoretical Framework}
 
@@ -147,26 +160,76 @@ Additionally, it is critical to understand that these terms differ depending on 
 Finally, as shown in the table \ref{fig:shared_responsibility} regarding the service model being followed, such as SaaS, IaaS or PaaS;
 it is important to understand that there are some aspects that must be controlled by the customer;
 such as the data stored within the systems, the security configurations and using a service that meets customer requirements \cite{ukGovrespon,sharedCrowdrespon}.
+
 \begin{table*}[h]
 \caption{Responsibility based on Service Models}
 \label{fig:shared_responsibility}
 \centering
-\begin{tabular}{c c c c c c}
+\begin{tabular}{l c c c c c}
 \hline
-\textbf{} & \textbf{On-premise} & \textbf{IaaS} & \textbf{PaaS} & \textbf{SaaS} & \textbf{References}\\
+\textbf{Responsibility} & \textbf{On-premise} & \textbf{IaaS} & \textbf{PaaS} & \textbf{SaaS} & \textbf{References} \\
 \hline
-Application Configuration & Customer & Customer & Customer & Customer & \cite{ukGovrespon,sharedCrowdrespon} \\
-Identity \& Access Controls & Customer & Customer & Customer / CSP & Customer / CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
-Application and Data Storage & Customer & Customer & Customer / CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
-Application & Customer & Customer & Customer & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
-Operating System & Customer & Customer & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
-Network Flow Controls & Customer & Customer / CSP & CSP & 
-CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
-Host Infrastructure & Customer & CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
-Physical Security & Customer & CSP & CSP & CSP & \cite{ukGovrespon,sharedCrowdrespon} \\
+
+Application Configuration 
+  & \multirow{8}{*}{Customer}
+  & \multirow{2}{*}{Customer}
+  & Customer
+  & Customer
+  & \multirow{8}{*}{\cite{ukGovrespon,sharedCrowdrespon}} \\
+
+Identity \& Access Controls
+  &
+  &
+  & Customer / CSP
+  & Customer / CSP
+  & \\
+
+Application and Data Storage
+  &
+  & Customer / CSP
+  & 
+  & \multirow{6}{*}{CSP}
+  & \\
+
+Application
+  &
+  &
+  &
+  &
+  & \\
+
+Operating System
+  &
+  & \multirow{2}{*}{CSP}
+  &
+  &
+  & \\
+
+Network Flow Controls
+  &
+  &
+  &
+  &
+  & \\
+
+Host Infrastructure
+  &
+  &
+  & \multirow{3}{*}{CSP}
+  &
+  & \\
+
+Physical Security
+  &
+  &
+  &
+  &
+  & \\
 \hline
 \end{tabular}
 \end{table*}
+
+
 \subsection{Most Common Security Vulnerabilities}
 
 The flexible and scalable environment that cloud computing provides came with new concerns about security issues \cite{centinelVulner}; this scenario is originated due to a bad transition to cloud-based environments and a lack of awareness of security threats, which have become more sophisticated and complex \cite{centinelVulner}.
@@ -302,7 +365,7 @@ As described in \cite{securityAlliancerep}, an organization should identify crit
 \section{Methodology}
 To develop the literature review within the cloud security environment a structured search is used.
 In addition, \textit{Google Scholar} is used as the database source information due to its large number of indexed publications.
-\subsection{Search Strategy}
+\subsection{Binary Search}
 A \textit{boolean search} is used for limiting the results and collecting higher quality results:
 \textit{"cloud computing security" AND ("AWS" OR "Azure" OR "GCP") AND ("vulnerabilities" OR "vulnerability") AND ("IaaS" OR "PaaS" OR "SaaS") - "IoT"}.
 \paragraph{Inclusion Criteria:} Inclusion criteria includes the following requirements:
@@ -422,7 +485,7 @@ Effective cybersecurity demands a shift from passive perimeter defense to proact
     \item \textbf{AI for Superior Detection:} Artificial Intelligence and Machine Learning demonstrate superior efficacy in identifying novel and low-volume threats, as evidenced by AI-driven IDS solutions achieving higher accuracy and faster response times compared to traditional rule-based mechanisms.
 \end{itemize}
 
-\subsection{Future Research Directions}
+\section{Future Research Directions}
 Future work should concentrate on addressing the core limitations of the current security landscape to ensure resilient and scalable solutions:
 \begin{itemize}
     \item \textbf{Trusted Execution and Data in Use:} Further development and industry integration of \textbf{Confidential Computing} technologies are essential to protect data during processing (data in use), mitigating side-channel and insider threats that bypass current encryption protocols.
