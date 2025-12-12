@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}    
 \usepackage[backend=biber,style=ieee]{biblatex}
 \usepackage{graphicx} 
+\usepackage{afterpage}
 \usepackage{multirow}
 \addbibresource{references.bib} 
 
@@ -434,36 +435,86 @@ The analysis presented in the State of the Art reveals a critical paradox in clo
 \subsection{The Dominance of Human Error and Misconfiguration}
 
 The most persistent threat across all service models is human-induced misconfiguration \cite{metibemuDevelopingProactiveThreat2025, SotaPericherlaCloudThreats, mpdiCyberattCloud}. Empirical data strongly support that organizational failure to properly manage the Shared Responsibility Model is the primary driver of risk \cite{mendozaEXPLORINGIMPACTSHARED2023, metibemuDevelopingProactiveThreat2025}.
-\begin{itemize}
-    \item \textbf{Quantifiable Impact:} Misconfigurations, particularly Identity and Access Management (IAM) errors (183 occurrences) and exposed APIs (156 occurrences), are the most frequent security failures in financial SaaS applications. An increase in misconfiguration severity results in an average of \$2.27M in financial losses and 93,300 compromised records.
-    \item \textbf{The Root Cause:} This high frequency is attributable to human error, inadequate security awareness, and reliance on manual configuration processes prone to error. This deficiency translates easily into security gaps, particularly because IAM solutions offered by cloud service providers (CSPs) are complex and prone to misinterpretation by clients.
-    \item \textbf{SLAs vs. Security:} The issue is exacerbated by the non-quantitative nature of security and privacy, which makes them difficult to incorporate into measurable Service Level Agreements (SLAs). This leaves customers contractually exposed to failures that fall outside the typical uptime metrics prioritized by standard SLAs.
-\end{itemize}
+
+\begin{table*}[h]
+    \caption{Quantifiable Impact of Misconfiguration}
+    \centering
+    \begin{tabular}{|l|p{0.6\textwidth}|l|}
+        \hline
+        \textbf{Metric} & \textbf{Key Finding} & \textbf{Citation} \\
+        \hline
+        \textbf{Quantifiable Impact} & Misconfigurations, particularly Identity and Access Management (IAM) errors (183 occurrences) and exposed APIs (156 occurrences), are the most frequent security failures in financial SaaS applications. & \cite{metibemuDevelopingProactiveThreat2025} \\
+        \hline
+        \multirow{2}{*}{\textbf{Financial Risk}} & An increase in misconfiguration severity results in an average of \$2.27M in financial losses and 93,300 compromised records. & \cite{metibemuDevelopingProactiveThreat2025} \\
+        \cline{2-3}
+        & The complexity of IAM solutions makes them prone to misinterpretation by clients, leading to security gaps. & \cite{mendozaEXPLORINGIMPACTSHARED2023, mpdiCyberattCloud} \\
+        \hline
+        \textbf{Root Cause} & This high frequency is attributable to human error, inadequate security awareness, and reliance on manual configuration processes. & \cite{metibemuDevelopingProactiveThreat2025} \\
+        \hline
+        \textbf{SLAs vs. Security} & The issue is exacerbated by the non-quantitative nature of security and privacy, making them difficult to incorporate into measurable Service Level Agreements (SLAs). & \cite{sureshkumarStudyCloudSecurity2021} \\
+        \hline
+        \textbf{Contractual Exposure} & This leaves customers contractually exposed to failures that fall outside the typical uptime metrics prioritized by standard SLAs. & \cite{sureshkumarStudyCloudSecurity2021} \\
+        \hline
+    \end{tabular}
+\end{table*}
 
 \subsection{Layer-Specific Security Challenges}
 
 Security requirements diverge significantly across the Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) models.
 
-\begin{itemize}
-    \item \textbf{IaaS and Core Isolation:} The core vulnerability in IaaS is rooted in Shared Technology Vulnerabilities, encompassing risks like VM Escape and attacks targeting the hypervisor layer. This burden of security shifts based on the deployment model: in public IaaS (e.g., AWS EC2), the CSP maintains the hypervisor security, whereas in private IaaS (e.g., Proxmox VE), the customer assumes full responsibility for the hardware and hypervisor layers.
-    \item \textbf{PaaS/SaaS and Access Control:} In PaaS and SaaS, the focus shifts away from infrastructure and towards application security, API security, and identity management. Attacks are often centered on the application logic or user credentials rather than the underlying virtualization layer.
-    \item \textbf{Operational Differences:} Public IaaS typically provides high security features, such as IDS/IPS and Web Application Firewalls (WAF), integrated and managed by the vendor on a pay-as-you-go basis. Conversely, equivalent advanced solutions in private IaaS often require manual deployment and expert configuration of third-party tools like Snort.
-\end{itemize}
+\begin{table*}[h]
+    \caption{Layer-Specific Security Challenges}
+    \centering
+    \begin{tabular}{|l|p{0.6\textwidth}|l|}
+        \hline
+        \textbf{Domain / Challenge} & \textbf{Key Finding} & \textbf{Citation} \\
+        \hline
+        \textbf{IaaS and Core Isolation} & The core vulnerability in IaaS is rooted in Shared Technology Vulnerabilities (e.g., VM Escape, hypervisor attacks). & \cite{mpdiCyberattCloud, sureshkumarStudyCloudSecurity2021} \\
+        \hline
+        \multirow{2}{*}{\textbf{IaaS Responsibility Shift}} & In public IaaS (e.g., AWS EC2), the CSP maintains the hypervisor security. & \cite{yosumazExaminationCyberSecurity2024} \\
+        \cline{2-3}
+        & In private IaaS (e.g., Proxmox VE), the customer assumes full responsibility for the hardware and hypervisor layers. & \cite{yosumazExaminationCyberSecurity2024} \\
+        \hline
+        \textbf{PaaS/SaaS Focus} & The focus shifts from infrastructure to application security, API security, and identity management. & \cite{mpdiCyberattCloud, fadeleCybersecurityModelIntelligent2024} \\
+        \hline
+        \textbf{Attack Vectors} & Attacks are often centered on the application logic or user credentials rather than the underlying virtualization layer. & \cite{fadeleCybersecurityModelIntelligent2024} \\
+        \hline
+        \textbf{Operational Differences} & Public IaaS provides high security features (IDS/WAF) integrated and managed by the vendor on a pay-as-you-go basis. & \cite{yosumazExaminationCyberSecurity2024} \\
+        \hline
+        \textbf{Private IaaS Solutions} & Advanced solutions in private IaaS often require manual deployment and expert configuration of third-party tools (e.g., Snort). & \cite{yosumazExaminationCyberSecurity2024} \\
+        \hline
+    \end{tabular}
+\end{table*}
 
 \subsection{The Role of Automation and Intelligent Mitigation}
 
-The complexity of the threat landscape makes automation an essential strategy to minimize human error and achieve real-time protection.
+The complexity of the threat landscape makes automation an essential strategy to minimize human error and achieve real-time protection \cite{fadeleCybersecurityModelIntelligent2024, nerellaAutomatedComplianceEnforcement2025}.
 
-\begin{itemize}
-    \item \textbf{AI-Enhanced Detection:} Advanced solutions, particularly those leveraging Artificial Intelligence (AI) and Machine Learning (ML), demonstrate superior efficacy. One experimental study showed that an AI-driven IDS (AWS GuardDuty) successfully detected malicious webshells, a capability often missed by less intelligent IDS solutions. The projected outcome is enhanced detection accuracy (up to 95\%) and significantly reduced response times (down to 10 seconds), suggesting a clear future direction for threat detection.
-    \item \textbf{Proactive Compliance:} For multi-cloud operations, automated compliance tools (like AWS Macie or GCP DLP) are critical, shifting the process from manual audits to continuous, intelligent data discovery and enforcement. This approach addresses the increasing regulatory burden (GDPR, HIPAA) that manual processes cannot scale to meet.
-    \item \textbf{The Next Generation of Defense:} Future mitigation strategies focus on protecting data \textit{in use} and ensuring auditability. This includes:
-    \begin{enumerate}
-        \item \textbf{Confidential Computing:} Protecting data during processing (memory and CPU) by keeping it encrypted in a Trusted Execution Environment (TEE), an important evolution from simple encryption at rest.
-        \item \textbf{Blockchain for Accountability:} Utilizing Distributed Ledger Technology (DLT) to create immutable audit trails, enhancing transparency, accountability, and enabling forensic research after an intrusion.
-        \item \textbf{Zero Trust Architecture (ZTA):} Enforcing continuous verification and the Principle of Least Privilege (PoLP) drastically reduces the vulnerability window, directly addressing the risks posed by compromised credentials and human error.
-    \end{enumerate}
-\end{itemize}
+\begin{table*}[h]
+    \caption{Intelligent Mitigation Strategies}
+    \centering
+    \begin{tabular}{|l|p{0.6\textwidth}|l|}
+        \hline
+        \textbf{Strategy / Concept} & \textbf{Key Finding} & \textbf{Citation} \\
+        \hline
+        \multirow{2}{*}{\textbf{AI-Enhanced Detection}} & AI/ML demonstrates superior efficacy. An AI-driven IDS (AWS GuardDuty) successfully detected webshells. & \cite{yosumazExaminationCyberSecurity2024} \\
+        \cline{2-3}
+        & Projected outcome includes enhanced detection accuracy (up to 95\%) and significantly reduced response times (down to 10 seconds). & \cite{fadeleCybersecurityModelIntelligent2024} \\
+        \hline
+        \textbf{Proactive Compliance} & For multi-cloud operations, automated compliance tools (e.g., AWS Macie, GCP DLP) are critical, addressing the increasing regulatory burden (GDPR, HIPAA). & \cite{nerellaAutomatedComplianceEnforcement2025} \\
+        \hline
+        \multicolumn{3}{|l|}{\textbf{The Next Generation of Defense}} \\
+        \hline
+        \textbf{Confidential Computing (CC)} & Protects data \textit{in use} (memory and CPU) by keeping it encrypted in a Trusted Execution Environment (TEE). & \cite{levinComparativeAnalysisSecurity2024, Sehgal2023CloudSecurityScalability} \\
+        \hline
+        \textbf{Blockchain (Accountability)} & Utilizes Distributed Ledger Technology (DLT) to create immutable audit trails, enhancing transparency and forensic capabilities. & \cite{nerellaAutomatedComplianceEnforcement2025, mpdiCyberattCloud} \\
+        \hline
+        \textbf{Zero Trust Architecture (ZTA)} & Enforcing continuous verification and the Principle of Least Privilege (PoLP) drastically reduces the vulnerability window. & \cite{metibemuDevelopingProactiveThreat2025} \\
+        \hline
+    \end{tabular}
+\end{table*}
+
+\newpage
 
 \section{Conclusions}
 \label{sec:conclusions}
@@ -485,9 +536,9 @@ Lastly, Artificial Intelligence and Machine Learning have become an emerging tec
 \section{Future Research Directions}
 Future work should concentrate on addressing the core limitations of the current security landscape to ensure resilient and scalable solutions:
 \begin{itemize}
-    \item \textbf{Trusted Execution and Data in Use:} Further development and industry integration of \textbf{Confidential Computing} technologies are essential to protect data during processing (data in use), mitigating side-channel and insider threats that bypass current encryption protocols.
-    \item \textbf{Accountability and Forensics:} Research is needed to develop unified, cross-platform standards for **Blockchain-based auditing** to create immutable, verifiable log trails for forensic analysis and compliance enforcement across multi-cloud environments.
-    \item \textbf{Usability and Abstraction:} Future security frameworks must focus on reducing the complexity barrier for end-users, leveraging intelligent automation to translate high-level security goals (e.g., PoLP) into low-level, error-proof cloud configurations, effectively closing the gap between the shared responsibility model and human capability.
+    \item \textit{Trusted Execution and Data in Use:} Further development and industry integration of Confidential Computing technologies are essential to protect data during processing (data in use), mitigating side-channel and insider threats that bypass current encryption protocols.
+    \item \textit{Accountability and Forensics:} Research is needed to develop unified, cross-platform standards for **Blockchain-based auditing** to create immutable, verifiable log trails for forensic analysis and compliance enforcement across multi-cloud environments.
+    \item \textit{Usability and Abstraction:} Future security frameworks must focus on reducing the complexity barrier for end-users, leveraging intelligent automation to translate high-level security goals (e.g., PoLP) into low-level, error-proof cloud configurations, effectively closing the gap between the shared responsibility model and human capability.
 \end{itemize}
 
 % ----- REFERENCIAS -----
