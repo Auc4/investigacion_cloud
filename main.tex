@@ -467,23 +467,20 @@ The complexity of the threat landscape makes automation an essential strategy to
 
 \section{Conclusions}
 \label{sec:conclusions}
-The systematic review and critical analysis of cloud security literature confirm that despite the technological maturity of major Cloud Service Providers (CSPs), cybersecurity remains the paramount concern for adoption, fundamentally challenged by systemic and human factors inherent to the cloud model. The findings lead to several key conclusions regarding risk posture, mitigation efficacy, and future strategic direction.
+The systematic review and critical analysis of cloud security literature confirm that despite the technological maturity of Cloud Service Providers (CSPs), cybersecurity remains a fundamental challenge that involves human factors inherent to the cloud model and mitigation strategies for resolving security threats.
 
-\subsection{Risk Posture: The Misconfiguration Paradox}
-The primary vulnerability vector is not the compromise of the CSP's core infrastructure, but rather the failure of customers to manage their portion of the shared responsibility model.
-\begin{itemize}
-    \item \textbf{Quantifiable Impact:} Misconfiguration, dominated by IAM errors and insecure APIs, is the leading cause of breaches across IaaS, PaaS, and SaaS, driving significant financial losses and exposing millions of records. This empirical evidence underscores the high stakes associated with human error and policy misinterpretation.
-    \item \textbf{Systemic Vulnerabilities:} Core technical risks persist, particularly those related to resource isolation in multi-tenancy environments, where flaws can manifest as side-channel attacks, resource contention, and, in severe cases, VM escape vulnerabilities.
-    \item \textbf{SaaS Security:} In the Software-as-a-Service model, where customers rely most heavily on the provider, the main challenges revolve around data breaches, lack of user control/visibility, and maintaining regulatory compliance, emphasizing the criticality of trust and governance external to the application itself.
-\end{itemize}
+First, customer misconfigurations are really common due to bag understanding of shared responsibility model. This problem is present in the different model services of cloud computing (CC) that includes SaaS, PaaS and IaaS which could drive in significant financial loses and millions of data record exposed.
 
-\subsection{Mitigation Efficacy and Operational Imperatives}
-Effective cybersecurity demands a shift from passive perimeter defense to proactive, layered, and context-aware strategies.
-\begin{itemize}
-    \item \textbf{Security as a Service (SECaaS):} The integration of Network Security as a Service (NSaaS) and similar SECaaS models is crucial for centralized monitoring and proactive defense, allowing organizations to deploy specialized tools (e.g., Snort, Honeypot) without compromising the inherent flexibility and scalability of the cloud platform.
-    \item \textbf{Automation is Mandatory:} Manual compliance and configuration management are neither scalable nor feasible in complex multi-cloud environments. The adoption of comprehensive solutions like Cloud Security Posture Management (CSPM) and the enforcement of Zero Trust Architecture (ZTA) reduce breach probability significantly by automating policy enforcement and continuous verification.
-    \item \textbf{AI for Superior Detection:} Artificial Intelligence and Machine Learning demonstrate superior efficacy in identifying novel and low-volume threats, as evidenced by AI-driven IDS solutions achieving higher accuracy and faster response times compared to traditional rule-based mechanisms.
-\end{itemize}
+Second, there is an inherent systemic vulnerability in different core areas because of the multi-tenancy environment within CC that increases the concern about resource isolation. Additionally, this vulnerability could lead into side-channel attacks, resource contention or VM escape in severe cases. 
+
+Finally, it is critical to focus the security in SaaS model service because customer rely most heavily on the provider and different challenges need to be achieved; for instance, data breaches, regulatory compliance, lack of user control/visibility and customer trust.
+
+To develop countermeasures against these most common threats it is crucial to adopt a proactive defense and a context-aware strategy. First of all, utilize a Security as a Service (SECaaS) service model allows to develop specialized tools, monitor computing assets with a proactive approach not compromising the flexibility and scalability of CC.
+
+Moreover, manual compliance and configuration management are not scalable or viable in multi-cloud environments; therefore, it is essential to adopt solutions like Cloud Security Posture Management (CSPM) and promote the use of Zero Trust Architectures (ZTA), reducing security incidents by automating policy enforcement and continuous verification.
+
+Lastly, Artificial Intelligence and Machine Learning have become an emerging technology that improves the effectiveness of different systems. However, these solutions require more studies and documented successfully cases for a widely implementation.
+
 
 \section{Future Research Directions}
 Future work should concentrate on addressing the core limitations of the current security landscape to ensure resilient and scalable solutions:
